@@ -1,0 +1,158 @@
+unique_name: project_dim
+object_type: dataset
+label: project_dim
+description: >-
+  The table contains information about various projects, including their
+  identifiers, names, and associated products. It also details the
+  organizational structure related to each project, such as portfolios,
+  reporting units, and cost centers. This data can be used for project tracking,
+  financial management, and understanding the relationships between projects and
+  their respective products or business units.
+
+
+  The source data for project is (Upland).
+columns:
+  - name: Project_ID
+    data_type: int
+  - name: Project_ProjectID
+    data_type: string
+  - name: Project_ProjectName
+    data_type: string
+  - name: Project_ReleaseAlias
+    data_type: string
+  - name: Project_Portfolio
+    data_type: string
+  - name: Project_Product_ID
+    data_type: long
+  - name: Project_Product_MasterProduct
+    data_type: string
+  - name: Project_Product_ProgramName
+    data_type: string
+  - name: Project_Product_ProgramParentName
+    data_type: string
+  - name: Project_Product_SegmentName
+    data_type: string
+  - name: Project_Product_PODFullName
+    data_type: string
+  - name: Project_Product_ProductOrigin
+    data_type: string
+  - name: Project_ReportingUnit_ID
+    data_type: int
+  - name: Project_ReportingUnit_ReportingUnit
+    data_type: string
+  - name: Project_ReportingUnit_ParentName
+    data_type: string
+  - name: Project_CostCenter_ID
+    data_type: int
+  - name: Project_CostCenter_Name
+    data_type: string
+  - name: Project_CostCenter_Level3
+    data_type: string
+  - name: Project_CostCenter_Level4
+    data_type: string
+  - name: Project_CostCenter_BusinessUnit
+    data_type: string
+  - name: Project_Location_TenroxUID
+    data_type: int
+  - name: Project_Location_Site
+    data_type: string
+  - name: Project_Location_Country
+    data_type: string
+  - name: Project_Location_SubRegion
+    data_type: string
+  - name: Project_Location_Region
+    data_type: string
+  - name: Project_Regions_ID
+    data_type: string
+  - name: Project_Workday_Country
+    data_type: string
+  - name: Project_Workday_SubRegion
+    data_type: string
+  - name: Project_Workday_Region
+    data_type: string
+  - name: Project_Workday_Group
+    data_type: string
+  - name: Project_Customer_TenroxUID
+    data_type: int
+  - name: Project_Customer_AccountName
+    data_type: string
+  - name: Project_UsedBy
+    data_type: string
+  - name: Project_ProjectStage
+    data_type: string
+  - name: Project_ProjectState
+    data_type: string
+  - name: Project_StartDate
+    data_type: date
+  - name: Project_EndDate
+    data_type: date
+  - name: Project_StartYear
+    data_type: int
+  - name: Project_EndYear
+    data_type: int
+  - name: Project_IsEndDated
+    data_type: boolean
+  - name: Project_OppCloseDate
+    data_type: date
+  - name: Project_AccountingEndDate
+    data_type: date
+  - name: Project_UpdatedOnDate
+    data_type: date
+  - name: Project_ProjectManager
+    data_type: string
+  - name: Project_AlternateManager
+    data_type: string
+  - name: Project_ClientPartner
+    data_type: string
+  - name: Project_OpportunityOwner
+    data_type: string
+  - name: Project_ResourceController
+    data_type: string
+  - name: Project_CompanyID
+    data_type: string
+  - name: Project_CompanyName
+    data_type: string
+  - name: Project_CompanyCurrencyCode
+    data_type: string
+  - name: Project_ProjectCurrencyCode
+    data_type: string
+  - name: Project_FixedBidCurrencyCode
+    data_type: string
+  - name: Project_OnHoldReasonCode
+    data_type: string
+  - name: Project_IsPS2Other
+    data_type: boolean
+  - name: Project_PS2OtherBucket
+    data_type: string
+  - name: Project_IsBudgetInitiatives
+    data_type: boolean
+  - name: Project_BudgetInitiativesBucket
+    data_type: string
+  - name: Project_TargetOnHoldReleaseDate
+    data_type: date
+  - name: Project_OnHoldReleaseDate
+    data_type: date
+  - name: Project_IsInvoiceable
+    data_type: boolean
+  - name: Project_TrackingNo
+    data_type: string
+  - name: Project_BillingTypeID
+    data_type: int
+  - name: Project_BillingType
+    data_type: string
+  - name: Project_ProjectType
+    data_type: string
+  - name: Project_BYProjectType
+    data_type: string
+  - name: Project_GPSNumber
+    data_type: string
+  - name: Project_IsXChargeable
+    data_type: boolean
+  - name: Project_IsBonusableProject
+    data_type: boolean
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: project_dim

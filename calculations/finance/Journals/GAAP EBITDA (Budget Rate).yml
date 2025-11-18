@@ -1,0 +1,20 @@
+unique_name: GAAP EBITDA (Budget Rate)
+object_type: metric_calc
+label: GAAP EBITDA (Budget Rate)
+description: >-
+  This metric calculates Earnings Before Interest, Taxes, Depreciation, and
+  Amortization (EBITDA) in accordance with Generally Accepted Accounting
+  Principles (GAAP) at budget rate, meaning the values are presented in their
+  original currency without translation to a reporting currency. It represents a
+  measure of operating performance that adds back non-cash expenses like
+  depreciation and amortization, as well as taxes, using the budgeted exchange
+  rates or original transaction currency. This measurement is used for budget
+  planning and variance analysis, helping organizations compare planned versus
+  actual operational efficiency in their native currencies without the effects
+  of currency conversion, supporting more accurate performance evaluation and
+  strategic decision-making across different markets and regions.
+expression: >-
+  [Measures].[Journal Budget Rate Amount]+[Measures].[Total Amortization (Budget
+  Rate)]-[Measures].[Depreciation (Budget Rate)]-[Measures].[Taxes (Budget
+  Rate)]
+is_hidden: false

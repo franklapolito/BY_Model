@@ -1,0 +1,59 @@
+unique_name: journal_dim
+object_type: dataset
+label: journal_dim
+description: >-
+  The table contains detailed records of journal entries related to financial
+  transactions. It includes information such as journal IDs, report types,
+  transaction dates, and various codes associated with revenue categories and
+  currencies. This data can be used for financial reporting, auditing purposes,
+  and analyzing transaction patterns over time.
+
+
+  The source of the Journal data is (Workday).
+columns:
+  - name: Journal_ID
+    data_type: string
+  - name: Journal_ReportType
+    data_type: string
+  - name: Journal_Number
+    data_type: string
+  - name: Journal_SequenceNumber
+    data_type: string
+  - name: Journal_LineCompanyID
+    data_type: string
+  - name: Journal_Source
+    data_type: string
+  - name: Journal_PeriodDate
+    data_type: date
+  - name: Journal_YearPartition
+    data_type: int
+  - name: Journal_BICustID
+    data_type: int
+  - name: Journal_TaxDriverID
+    data_type: string
+  - name: Journal_PurchaseItem
+    data_type: string
+  - name: Journal_RevenueCategoryID
+    data_type: string
+  - name: PCOACodeName
+    data_type: string
+  - name: WingCodeName
+    data_type: string
+  - name: VegaCode1
+    data_type: string
+  - name: WingCode2
+    data_type: string
+  - name: WingCode3
+    data_type: string
+  - name: VegaCode2
+    data_type: string
+  - name: Journal_LedgerCurrencyCode
+    data_type: string
+  - name: Journal_TransactionCurrencyCode
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_finance
+table: journal_dim

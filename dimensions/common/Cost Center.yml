@@ -1,0 +1,91 @@
+unique_name: Cost Center
+object_type: dimension
+label: Cost Center
+description: >-
+  A cost center is a division, department, or unit within a company that incurs
+  costs but does not does not always generate revenue. These centers are crucial
+  for business operations, supporting revenue-generating activities by
+  performing functions like marketing, IT, or customer service. By tracking
+  expenses, cost centers allow for better resource allocation, financial
+  control, and strategic decision-making, helping the organization improve
+  efficiency and profitability indirectly.
+
+
+  The source of this data is in Workday.
+hierarchies:
+  - unique_name: Cost Center  Hierarchy
+    label: Cost Center  Hierarchy
+    description: >-
+      A Cost Center Hierarchy is an organized structure used by businesses to
+      manage and report financial data related to various departments or units.
+      It allows organizations to categorize and track expenses, ensuring
+      efficient budget management and financial accountability. By establishing
+      a clear hierarchy, companies can streamline financial operations, enhance
+      transparency, and facilitate strategic decision-making. This structure
+      supports effective resource allocation and provides insights into cost
+      control and performance evaluation across different levels of the
+      organization.
+    levels:
+      - unique_name: Cost Center Level 3
+      - unique_name: Cost Center Level 4
+      - unique_name: Cost Center Level 5
+      - unique_name: Cost Center ID
+        secondary_attributes:
+          - unique_name: Business Unit
+            label: Business Unit
+            description: >-
+              Indicates the name of the business unit associated with the cost
+              center, providing clarity on its organizational context.
+            contains_unique_names: false
+            dataset: costcenter_dim
+            is_aggregatable: false
+            is_unique_key: false
+            key_columns:
+              - CostCenter_BusinessUnit
+            name_column: CostCenter_BusinessUnit
+            sort_column: CostCenter_Name
+level_attributes:
+  - unique_name: Cost Center ID
+    label: Cost Center
+    description: >-
+      Indicates the name of the cost center, providing a descriptive label for
+      identification purposes.
+    contains_unique_names: false
+    dataset: costcenter_dim
+    is_unique_key: false
+    key_columns:
+      - CostCenter_ID
+    name_column: CostCenter_Name
+  - unique_name: Cost Center Level 4
+    label: Cost Center Level 4
+    description: >-
+      Represents the fourth level of the cost center hierarchy, providing
+      context for the cost center's placement within the overall structure.
+    contains_unique_names: false
+    dataset: costcenter_dim
+    is_unique_key: false
+    key_columns:
+      - CostCenter_Level4
+    name_column: CostCenter_Level4
+  - unique_name: Cost Center Level 3
+    label: Cost Center Level 3
+    description: >-
+      Describes the third level of the cost center hierarchy, giving additional
+      context to the cost center's role.
+    contains_unique_names: false
+    dataset: costcenter_dim
+    is_unique_key: false
+    key_columns:
+      - CostCenter_Level3
+    name_column: CostCenter_Level3
+  - unique_name: Cost Center Level 5
+    label: Cost CenterLevel 5
+    description: >-
+      Describes the fifth level of the cost center hierarchy, offering insight
+      into the specific grouping or function it represents.
+    contains_unique_names: false
+    dataset: costcenter_dim
+    key_columns:
+      - CostCenter_Level5
+    name_column: CostCenter_Level5
+type: standard

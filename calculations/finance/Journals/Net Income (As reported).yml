@@ -1,0 +1,18 @@
+unique_name: Net Income (As reported)
+object_type: metric_calc
+label: Net Income (As Reported)
+description: >
+  This metric represents the bottom-line profitability of the organization,
+  calculated as total revenues minus all expenses, including operating costs,
+  interest, taxes, depreciation, and amortization. It captures the net earnings
+  available to shareholders after accounting for all costs of doing business,
+  reflecting the overall financial performance and value creation during a
+  specific period. This measurement is used for financial reporting purposes to
+  show the as-reported figures for net income, helping organizations evaluate
+  overall profitability, assess management effectiveness, support dividend and
+  reinvestment decisions, calculate earnings per share, and communicate
+  financial results to investors and stakeholders.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger
+  Account].[FinancialStatement].[FinancialStatement].&[Income Statement])
+is_hidden: false

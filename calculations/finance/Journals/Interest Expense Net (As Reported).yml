@@ -1,0 +1,18 @@
+unique_name: Interest Expense Net (As Reported)
+object_type: metric_calc
+label: Interest Expense Net (As Reported)
+description: >-
+  This metric tracks the net interest expense, representing the difference
+  between interest costs incurred on borrowed funds and interest income earned
+  on cash, investments, and other interest-bearing assets. It captures the
+  overall financial impact of the organization's borrowing and lending
+  activities, showing whether the business is a net payer or receiver of
+  interest after offsetting income against expenses. This measurement is used
+  for financial reporting purposes to show the as-reported figures for net
+  interest position, helping organizations understand their overall cost of
+  capital, evaluate the efficiency of cash management and financing strategies,
+  and assess the net impact of debt and investment activities on profitability.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  Hierarchy].[LedgerAccount Level 5].&[Interest Income and Other, net])
+is_hidden: true

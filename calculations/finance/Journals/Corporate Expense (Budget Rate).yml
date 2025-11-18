@@ -1,0 +1,19 @@
+unique_name: Corporate Expense (Budget Rate)
+object_type: metric_calc
+label: Corporate Expense (Budget Rate)
+description: >-
+  This metric captures the total expense amounts generated from all
+  expense-related accounts at the corporate level at budget rate, meaning the
+  values are presented in their original currency without translation to a
+  reporting currency. It represents the comprehensive view of operational costs
+  incurred across the organization, including salaries, benefits, marketing,
+  administrative costs, utilities, and other day-to-day expenditures, using the
+  budgeted exchange rates or original transaction currency. This measurement is
+  used for budget planning and variance analysis, helping organizations compare
+  planned versus actual corporate expenses in their native currencies without
+  the effects of currency conversion, supporting more accurate cost management
+  and financial forecasting.
+expression: >-
+  ([Measures].[Journal Budget Rate Amount],[Ledger Account].[Ledger Account
+  Type].[Ledger Account Type].&[Expense])
+is_hidden: false

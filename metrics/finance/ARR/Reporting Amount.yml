@@ -1,0 +1,9 @@
+unique_name: Reporting Amount
+object_type: metric
+label: Reporting Amount
+description: >
+  Indicates the amount reported in USD for the agreement, essential for
+  financial reporting and currency conversion.
+calculation_method: sum
+column: ARR_ReportingAmountUSD
+dataset: Annual Recurring Revenue

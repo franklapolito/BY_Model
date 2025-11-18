@@ -1,0 +1,57 @@
+unique_name: journal_fact
+object_type: dataset
+label: journal_fact
+description: >-
+  The table contains financial journal entries related to customer transactions.
+  It includes details such as the customer ID, ledger account, location, and
+  various amounts associated with each entry. This data can be used for
+  financial reporting, budget analysis, and tracking project costs. It is useful
+  for understanding spending patterns and managing financial records.
+
+
+  The source of the Journal data is (Workday).
+columns:
+  - name: Journal_ID
+    data_type: string
+  - name: Journal_Date_ID
+    data_type: int
+  - name: Journal_Customer_ID
+    data_type: string
+  - name: Journal_LedgerAccount_ID
+    data_type: string
+  - name: Journal_Location_ID
+    data_type: int
+  - name: Journal_FinancialRegion_ID
+    data_type: string
+  - name: Journal_CostCenter_ID
+    data_type: int
+  - name: Journal_Product_ID
+    data_type: long
+  - name: Journal_Project_ID
+    data_type: int
+  - name: Journal_SalesItem_ID
+    data_type: string
+  - name: Journal_User_ID
+    data_type: int
+  - name: Journal_SpendCategory_ID
+    data_type: string
+  - name: Journal_ContractNumber
+    data_type: string
+  - name: Journal_TimeEntryUID
+    data_type: int
+  - name: AddbackProject_Key
+    data_type: string
+  - name: Journal_TransactionAmount
+    data_type: decimal(28,2)
+  - name: Journal_BudgetRateAmount
+    data_type: decimal(28,2)
+  - name: Journal_TranslatedAmount
+    data_type: decimal(28,2)
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+  - name: Journal_LedgerAmount
+    data_type: decimal(28,2)
+connection_id: con_edp_prd_semantic_staging_finance
+table: journal_fact

@@ -1,0 +1,61 @@
+unique_name: date_dim
+object_type: dataset
+label: date_dim
+description: >-
+  The table contains detailed date-related information, including various time
+  periods such as years, quarters, months, and weeks. It's primary use is for
+  time series analysis, reporting, and trend identification across different
+  time frames. This data is useful for understanding seasonal patterns,
+  analyzing performance over time, and aligning other datasets with specific
+  dates.
+columns:
+  - name: Date_ID
+    data_type: int
+  - name: Date_Name
+    data_type: date
+  - name: Date_YearID
+    data_type: int
+  - name: Date_Year
+    data_type: string
+  - name: Date_HalfYearID
+    data_type: int
+  - name: Date_HalfYear
+    data_type: string
+  - name: Date_QuarterID
+    data_type: int
+  - name: Date_Quarter
+    data_type: string
+  - name: Date_MonthID
+    data_type: int
+  - name: Date_Month
+    data_type: string
+  - name: Date_WeekID
+    data_type: int
+  - name: Date_Week
+    data_type: string
+  - name: Date_WeekOfYear
+    data_type: int
+  - name: Date_WeekDayID
+    data_type: int
+  - name: Date_MonthOfYearID
+    data_type: int
+  - name: Date_MonthOfYear
+    data_type: string
+  - name: Date_HalfOfYear
+    data_type: int
+  - name: Date_QuarterOfYear
+    data_type: int
+  - name: Date_WkStartDate
+    data_type: date
+  - name: Date_WkEndDate
+    data_type: date
+  - name: Date_Tag
+    data_type: string
+  - name: Date_NextMonthStart
+    data_type: date
+  - name: Date_TrailM
+    data_type: double
+  - name: Date_TrailQ
+    data_type: double
+connection_id: con_edp_prd_semantic_staging_common
+table: date_dim

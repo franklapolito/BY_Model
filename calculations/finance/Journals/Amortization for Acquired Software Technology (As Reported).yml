@@ -1,0 +1,17 @@
+unique_name: Amortization for Acquired Software Technology (As Reported)
+object_type: metric_calc
+label: Amortization for Acquired Software Technology (As Reported)
+description: >-
+  This metric tracks the amortization expense for acquired software technology
+  assets, representing the systematic allocation of costs associated with
+  purchased or acquired software over its useful life. It captures the non-cash
+  expense that reflects how the value of software assets obtained through
+  acquisitions or purchases is gradually recognized over time. This measurement
+  is used for financial reporting purposes to show the as-reported figures for
+  software technology amortization, helping organizations understand the
+  financial impact of their technology investments and meet accounting
+  requirements for intangible asset depreciation.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  ID].[Ledger Account ID].&[5200])
+is_hidden: true

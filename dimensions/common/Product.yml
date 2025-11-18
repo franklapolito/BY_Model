@@ -1,0 +1,321 @@
+unique_name: Product
+object_type: dimension
+label: Product
+description: >-
+  The table contains detailed information about products, including their
+  identifiers, names, classifications, and lifecycle stages. It can be used for
+  product management, market analysis, and reporting purposes. Key use cases
+  include tracking product variations, analyzing market segments, and
+  understanding product positioning within programs. Additionally, it provides
+  insights into product origins and delivery points, which can aid in logistics
+  and compliance.
+
+
+  The source of this data is Salesforce MDM.
+hierarchies:
+  - unique_name: Product
+    label: Product
+    levels:
+      - unique_name: Product ID
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: Product Name
+            label: Product Name
+            description: >-
+              The name of the product as it is recognized in the market,
+              providing a clear identification for users.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductName
+            name_column: Product_ProductName
+          - unique_name: Product Code Name
+            label: Product Code Name
+            description: >-
+              A specific code or shorthand used to identify the product, useful
+              for internal tracking and reporting.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductCodeName
+            name_column: Product_ProductCodeName
+          - unique_name: Master Product ID
+            label: Master Product ID
+            description: >-
+              Identifier for the master product, which may encompass multiple
+              variations or versions of a product.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_MasterProductID
+            name_column: Product_MasterProductID
+          - unique_name: Product Master
+            label: Product Master
+            description: >-
+              The name of the master product, representing the overarching
+              product category or family.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_MasterProduct
+            name_column: Product_MasterProduct
+          - unique_name: Product Master Product Code Name
+            label: Product Master Product Code Name
+            description: >-
+              Code associated with the master product, facilitating easier
+              reference across systems.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_MasterProductCodeName
+            name_column: Product_MasterProductCodeName
+          - unique_name: Program Name
+            label: Program Name
+            description: >-
+              The name of the program associated with the product, providing
+              context for its classification.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProgramName
+            name_column: Product_ProgramName
+          - unique_name: Program Parent Name
+            label: Program Parent Name
+            description: >-
+              Name of the parent program, which helps in understanding the
+              broader context of the product's classification.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProgramParentName
+            name_column: Product_ProgramParentName
+          - unique_name: Segment Name
+            label: Segment Name
+            description: >-
+              The name of the market segment, providing insight into the target
+              audience for the product.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_SegmentName
+            name_column: Product_SegmentName
+          - unique_name: Product Type
+            label: Product Type
+            description: >-
+              Classification of the product type, which can help in categorizing
+              products for reporting and analysis.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductType
+            name_column: Product_ProductType
+          - unique_name: Product Is Core Complement
+            label: Product Is Core Complement
+            description: >-
+              Indicates whether the product is a core offering or a
+              complementary product, which can influence marketing strategies.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_IsCoreComplement
+            name_column: Product_IsCoreComplement
+          - unique_name: Product Life Cycle
+            label: Product Life Cycle
+            description: >-
+              Describes the current stage of the product's life cycle, providing
+              insights into its market position.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_LifeCycle
+            name_column: Product_LifeCycle
+          - unique_name: Product Innovation Horizon
+            label: Product Innovation Horizon
+            description: >-
+              Indicates the timeframe for expected innovations or updates to the
+              product, useful for planning and strategy.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_InnovationHorizon
+            name_column: Product_InnovationHorizon
+          - unique_name: Product Disposition
+            label: Product Disposition
+            description: >-
+              Details the current status or disposition of the product, which
+              can inform inventory and sales strategies.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductDisposition
+            name_column: Product_ProductDisposition
+          - unique_name: Product License Level Product ID
+            label: Product License Level Product ID
+            description: >-
+              Identifier for the license level associated with the product,
+              important for compliance and licensing management.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_LicenseLevelProductID
+            name_column: Product_LicenseLevelProductID
+          - unique_name: Product Origin
+            label: Product Origin
+            description: >-
+              Describes the origin of the product, which may include information
+              about its development or manufacturing.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductOrigin
+            name_column: Product_ProductOrigin
+          - unique_name: Product Point of Delivery
+            label: Product Point of Delivery
+            description: >-
+              The point of delivery for the product, which can impact
+              distribution and logistics planning.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_POD
+            name_column: Product_POD
+          - unique_name: Product Sub Point of Delivery
+            label: Product Sub Point of Delivery
+            description: >-
+              Subcategory of the point of delivery, providing more granular
+              information about product distribution.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_SubPOD
+            name_column: Product_SubPOD
+          - unique_name: Product Group
+            label: Product Group
+            description: >-
+              Group classification for the product, which can assist in
+              organizing products for reporting and analysis.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_ProductGroup
+            name_column: Product_ProductGroup
+          - unique_name: Product Subscription Model
+            label: Product Subscription Model
+            description: >-
+              Describes the subscription model applicable to the product,
+              relevant for pricing and sales strategies.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_SubscriptionModel
+            name_column: Product_SubscriptionModel
+          - unique_name: Product Is Azure Only
+            label: Product Is Azure Only
+            description: >-
+              Indicates whether the product is exclusively available on the
+              Azure platform, which can affect marketing and sales efforts.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_IsAzureOnly
+            name_column: Product_IsAzureOnly
+          - unique_name: Product Domain Group
+            label: Product Domain Group
+            description: >-
+              Group classification for the domain under which the product falls,
+              useful for categorization.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_DomainGroup
+            name_column: Product_DomainGroup
+          - unique_name: Product Domain
+            label: Product Domain
+            description: >-
+              Specific domain associated with the product, providing context for
+              its application and target market.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_Domain
+            name_column: Product_Domain
+          - unique_name: Product Website Category
+            label: Product Website Category
+            description: >-
+              Category under which the product is listed on the website, aiding
+              in online marketing and navigation.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_WebsiteCategory
+            name_column: Product_WebsiteCategory
+          - unique_name: Product Website Sub Category
+            label: Product Website Sub Category
+            description: >-
+              Subcategory for the product on the website, providing further
+              detail for online organization.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_WebsiteSubCategory
+            name_column: Product_WebsiteSubCategory
+          - unique_name: Product License Level Product Name
+            label: Product License Level Product Name
+            description: >-
+              Name of the license level associated with the product, important
+              for understanding compliance requirements.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_LicenseLevelProductName
+            name_column: Product_LicenseLevelProductName
+          - unique_name: Point of Delivery Full Name
+            label: Point of Delivery Full Name
+            description: >-
+              Full name of the point of delivery, providing clarity for
+              logistics and distribution.
+            contains_unique_names: false
+            dataset: product_dim
+            is_unique_key: false
+            key_columns:
+              - Product_PODFullName
+            name_column: Product_PODFullName
+level_attributes:
+  - unique_name: Product ID
+    label: Product ID
+    description: >-
+      Unique identifier for each product in the dataset, allowing for easy
+      reference and tracking.
+    contains_unique_names: false
+    dataset: product_dim
+    is_unique_key: false
+    key_columns:
+      - Product_ID
+    name_column: Product_ID
+    sort_column: Product_ID
+type: standard

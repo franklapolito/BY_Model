@@ -1,0 +1,8 @@
+unique_name: Total Translated Amount
+object_type: metric
+label: Total Translated Amount
+description: Total Amount sourced from Journals (as reported)
+calculation_method: sum
+column: Journal_TranslatedAmount
+dataset: journal_fact
+is_hidden: true

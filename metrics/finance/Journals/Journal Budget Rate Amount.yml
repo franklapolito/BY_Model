@@ -1,0 +1,7 @@
+unique_name: Journal Budget Rate Amount
+object_type: metric
+label: Journal Budget Rate Amount
+calculation_method: sum
+column: Journal_BudgetRateAmount
+dataset: journal_fact
+is_hidden: true

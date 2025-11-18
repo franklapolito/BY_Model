@@ -1,0 +1,86 @@
+unique_name: arr_dim
+object_type: dataset
+label: arr_dim
+columns:
+  - name: ARR_ID
+    data_type: long
+  - name: ARR_TableSource
+    data_type: string
+  - name: ARR_AgreementStartDate
+    data_type: date
+  - name: ARR_AgreementEndDate
+    data_type: date
+  - name: ARR_AgreementXINTDate
+    data_type: date
+  - name: ARR_AgreementXintStatusDesc
+    data_type: string
+  - name: ARR_AgreementNumber
+    data_type: string
+  - name: ARR_FFAgreementNumber
+    data_type: string
+  - name: ARR_SourceID
+    data_type: int
+  - name: ARR_SourceName
+    data_type: string
+  - name: ARU_BU
+    data_type: string
+  - name: ARR_AgreementName
+    data_type: string
+  - name: ARR_AgreementDuration
+    data_type: double
+  - name: ARR_AgreementType
+    data_type: string
+  - name: ARR_AgreementRecurringBillingFrequency
+    data_type: string
+  - name: ARR_AgreementDealBand
+    data_type: string
+  - name: ARR_AgreementOppID
+    data_type: string
+  - name: ARR_AgreementReasonCodeCategory
+    data_type: string
+  - name: ARR_AgreementReasonCode
+    data_type: string
+  - name: ARR_AgreementIsRenewable
+    data_type: boolean
+  - name: ARR_AgreementRevenueOnHoldReason
+    data_type: string
+  - name: ARR_IsSaaSConversion
+    data_type: boolean
+  - name: ARR_CustType
+    data_type: string
+  - name: ARR_AgreementRenewalProbability
+    data_type: string
+  - name: ARR_AgreementCancelTerm
+    data_type: string
+  - name: ARR_AgreementStatus
+    data_type: string
+  - name: ARR_AgreementSubscriptionModel
+    data_type: string
+  - name: ARR_AgreementContractEndDate
+    data_type: date
+  - name: ARR_AgreementContractStartDate
+    data_type: date
+  - name: ARR_AgreementEntitlementName
+    data_type: string
+  - name: ARR_Rank
+    data_type: int
+  - name: ARR_NewAgreementNumber
+    data_type: string
+  - name: ARR_NewAgreementSourceName
+    data_type: string
+  - name: ARR_NewAgreementStartDate
+    data_type: string
+  - name: ARR_NewAgreementEndDate
+    data_type: string
+  - name: ARR_EndOfTermFlag
+    data_type: boolean
+  - name: ARR_EndOfTermCurrQtrFlg
+    data_type: boolean
+  - name: ARR_AgreementCurrencyCode
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_finance
+table: arr_dim

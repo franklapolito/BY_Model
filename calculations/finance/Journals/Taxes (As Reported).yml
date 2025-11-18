@@ -1,0 +1,18 @@
+unique_name: Taxes (As Reported)
+object_type: metric_calc
+label: Taxes (As Reported)
+description: >-
+  This metric tracks the total tax expenses incurred by the organization,
+  representing all tax obligations including income taxes, corporate taxes, and
+  other tax liabilities related to business operations. It captures the amounts
+  owed to various tax authorities based on taxable income and applicable tax
+  rates, reflecting the organization's tax burden as required by regulatory
+  requirements. This measurement is used for financial reporting purposes to
+  show the as-reported figures for tax expenses, helping organizations
+  understand their effective tax rate, evaluate tax efficiency, support tax
+  planning strategies, and ensure compliance with financial reporting standards
+  and tax regulations.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  Hierarchy].[LedgerAccount Level 3].&[Taxes])
+is_hidden: true

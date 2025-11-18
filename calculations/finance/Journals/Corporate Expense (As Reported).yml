@@ -1,0 +1,17 @@
+unique_name: Corporate Expense (As Reported)
+object_type: metric_calc
+label: Corporate Expense (As Reported)
+description: >-
+  This metric captures the total expense amounts generated from all
+  expense-related accounts at the corporate level. It represents the
+  comprehensive view of operational costs incurred across the organization,
+  including salaries, benefits, marketing, administrative costs, utilities, and
+  other day-to-day expenditures necessary to run the business. This measurement
+  is used for financial reporting purposes to show the as-reported figures for
+  corporate expenses, helping organizations monitor overall spending, analyze
+  cost trends, support budgeting decisions, and evaluate operational efficiency
+  across the entire enterprise.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  Type].[Ledger Account Type].&[Expense])
+is_hidden: false

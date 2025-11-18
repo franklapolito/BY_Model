@@ -1,0 +1,191 @@
+unique_name: Journals.yml
+object_type: model
+label: Journals.yml
+description: >-
+  This semantic model captures financial journal entry data for accounting and
+  financial reporting purposes. It serves as the core transactional record for
+  tracking financial movements across the organization.
+
+  Primary Purpose:
+
+  Records detailed financial transactions with associated monetary amounts,
+  enabling comprehensive financial analysis and reporting across multiple
+  business dimensions including time, location, organizational structure,
+  accounts, and projects.
+
+  Key Metrics:
+
+  The table supports calculation of critical financial metrics including:
+
+
+  Revenue and expense tracking (as reported and budget rate)
+
+  Net income calculations
+
+  EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization)
+
+  Interest expense components
+
+  Depreciation and amortization breakdowns
+
+  Tax calculations
+
+  Translation and currency conversion amounts
+
+
+  Dimensional Context:
+
+  The fact table connects to multiple dimensions to enable slicing and analysis
+  by:
+
+
+  Time: Journal entry dates
+
+  Geography: Financial regions and physical locations/sites
+
+  Organization: Cost centers
+
+  Accounting: Ledger accounts and chart of accounts hierarchy
+
+  Projects: Project-level tracking including addback projects
+
+  Products: Product-level financial allocation
+
+  Customers: Customer-specific transactions
+
+  Users: User who created/modified the journal entry
+
+
+  Use Cases:
+
+
+  Financial statement preparation (P&L, balance sheet components)
+
+  Budget vs. actual analysis with currency adjustments
+
+  Multi-dimensional profitability analysis
+
+  Compliance and audit reporting
+
+  Management reporting with various roll-up capabilities
+dimensions: []
+metrics:
+  - unique_name: Total Translated Amount
+  - unique_name: BU Owned Expense (As Reported)
+  - unique_name: Corporate Expense (As Reported)
+  - unique_name: Total Revenue (As Reported)
+  - unique_name: Net Income (As reported)
+  - unique_name: Interest Expense (As Reported)
+  - unique_name: Taxes (As Reported)
+  - unique_name: Depreciation (As Reported)
+  - unique_name: GAAP EBITDA (AS Reported)
+  - unique_name: Journal Budget Rate Amount
+  - unique_name: Taxes (Budget Rate)
+  - unique_name: Depreciation (Budget Rate)
+  - unique_name: GAAP EBITDA (Budget Rate)
+  - unique_name: Total Revenue (Budget Rate)
+  - unique_name: Corporate Expense (Budget Rate)
+  - unique_name: Net Income (Budget Rate)
+  - unique_name: BU Owned Expense (Budget Rate)
+  - unique_name: Interest Expense Fee (As Reported)
+  - unique_name: Interest Expense For Asset-Related Accounts (As Reported)
+  - unique_name: Total Amortization (As Reported)
+  - unique_name: Amortization for Acquired Software Technology (As Reported)
+  - unique_name: Amortization for Intangibles (As Reported)
+  - unique_name: Total Amortization (Budget Rate)
+  - unique_name: Amortization for Acquired Software Technology (Budget Rate)
+  - unique_name: Amortization for Intangibles (Budget Rate)
+  - unique_name: Interest Expense Net (As Reported)
+relationships:
+  - unique_name: journal_fact_Journal_Date_ID_to_Date Dimension_DateID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_Date_ID
+    to:
+      dimension: Date
+      level: Date ID
+  - unique_name: journal_fact_Journal_Location_ID_to_Region Dimension_Location ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_CostCenter_ID
+    to:
+      dimension: Cost Center
+      level: Cost Center ID
+  - unique_name: >-
+      journal_fact_Journal_LedgerAccount_ID_to_Ledger Account Dimensions_Ledger
+      Account Name
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_LedgerAccount_ID
+    to:
+      dimension: Ledger Account
+      level: Ledger Account Name
+  - unique_name: journal_fact_AddbackProject_Key_to_AddBack Project_Project Key
+    from:
+      dataset: journal_fact
+      join_columns:
+        - AddbackProject_Key
+    to:
+      dimension: AddBack
+      level: Project Key
+  - unique_name: journal_fact_Journal_User_ID_to_user_dim_dimension_User ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_User_ID
+    to:
+      dimension: Users
+      level: User ID
+  - unique_name: journal_fact_Journal_Location_ID_to_Location Dimension_Site
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_Location_ID
+    to:
+      dimension: Location
+      level: Site
+  - unique_name: >-
+      journal_fact_Journal_FinancialRegion_ID_to_financialregion_dim_dimension_Region
+      ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_Product_ID
+    to:
+      dimension: Product
+      level: Product ID
+  - unique_name: journal_fact_Journal_Project_ID_to_Project Dimension_Project ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_Project_ID
+    to:
+      dimension: Project
+      level: Project ID
+  - unique_name: journal_fact_Journal_Customer_ID_to_Customer DImension_Customer ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_ID
+    to:
+      dimension: Journal
+      level: Journal ID
+  - unique_name: journal_fact_Journal_FinancialRegion_ID_to_Region Dimension_Region ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_FinancialRegion_ID
+    to:
+      dimension: Finance Region
+      level: Region ID
+  - unique_name: journal_fact_Journal_Customer_ID_to_Customer Dimension_Customer ID
+    from:
+      dataset: journal_fact
+      join_columns:
+        - Journal_Customer_ID
+    to:
+      dimension: Customer
+      level: Customer ID

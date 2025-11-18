@@ -1,0 +1,494 @@
+unique_name: Users
+object_type: dimension
+label: Users
+description: >-
+  The table contains user information relevant to organizational structure and
+  roles. It includes details such as user identifiers, names, managerial
+  relationships, job titles, and cost center affiliations. This data can be used
+  for analyzing workforce distribution, understanding reporting hierarchies, and
+  managing resource allocation within the organization.
+
+
+  User data is primarily sourced from (Workday) but also pulls additional
+  attributes from Upland.
+hierarchies:
+  - unique_name: User Dimension
+    label: User Dimension
+    levels:
+      - unique_name: User ID
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: First Name
+            label: First Name
+            description: >-
+              The first name of the user, useful for personalizing
+              communications and reports.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_FirstName
+            name_column: User_FirstName
+          - unique_name: Last Name
+            label: Last Name
+            description: >-
+              The last name of the user, which, along with the first name, helps
+              in identifying individuals within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_LastName
+            name_column: User_LastName
+          - unique_name: Full Name
+            label: Full Name
+            description: >-
+              The complete name of the user, combining first and last names for
+              easier reference in reports and systems.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_FullName
+            name_column: User_FullName
+          - unique_name: Position
+            label: Position
+            description: >-
+              The name of the user's position, providing insight into their
+              specific role within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_Position
+            name_column: User_Position
+          - unique_name: Business Title
+            label: Business Title
+            description: >-
+              The official business title of the user, which reflects their role
+              and responsibilities within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_BusinessTitle
+            name_column: User_BusinessTitle
+          - unique_name: Job Family
+            label: Job Family
+            description: >-
+              The classification of the user's job within a family of similar
+              roles, aiding in workforce analysis and planning.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_JobFamily
+            name_column: User_JobFamily
+          - unique_name: Job Profile
+            label: Job Profile
+            description: >-
+              The name of the user's job profile, providing context for their
+              responsibilities and career path.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_JobProfile
+            name_column: User_JobProfile
+          - unique_name: Job Title
+            label: Job Title
+            description: >-
+              The title of the user's job, which is often used in external
+              communications and organizational charts.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_JobTitle
+            name_column: User_JobTitle
+          - unique_name: Budget Role
+            label: Budget Role
+            description: >-
+              The role of the user in relation to budget management, important
+              for financial planning and resource allocation.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_BudgetRole
+            name_column: User_BudgetRole
+          - unique_name: Utilization Type
+            label: Utilization Type
+            description: >-
+              Indicates how the user's time is utilized, which is crucial for
+              resource management and project planning.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_UtilizationType
+            name_column: User_UtilizationType
+          - unique_name: Role Type
+            label: Role Type
+            description: >-
+              The type of role the user holds within the organization, which can
+              impact their responsibilities and reporting structure.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_RoleType
+            name_column: User_RoleType
+          - unique_name: Planning Role
+            label: Planning Role
+            description: >-
+              The specific role the user plays in planning activities, important
+              for project management and resource allocation.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_PlanningRole
+            name_column: User_PlanningRole
+          - unique_name: Grade
+            label: Grade
+            description: >-
+              The grade level of the user within the organization, which can
+              influence salary and promotion opportunities.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_Grade
+            name_column: User_Grade
+          - unique_name: Frequency for Primary Position
+            label: Frequency for Primary Position
+            description: >-
+              Indicates the frequency of the user's primary position, which can
+              be relevant for scheduling and resource allocation.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_FrequencyforPrimaryPosition
+            name_column: User_FrequencyforPrimaryPosition
+          - unique_name: Worker Type
+            label: Worker Type
+            description: >-
+              The classification of the user as a worker, such as full-time or
+              part-time, important for workforce planning.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_WorkerType
+            name_column: User_WorkerType
+          - unique_name: Time Type
+            label: Time Type
+            description: >-
+              Indicates the type of time arrangement for the user, such as part
+              time or full time, relevant for staffing and utilization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_TimeType
+            name_column: User_TimeType
+          - unique_name: On Leave
+            label: On Leave
+            description: >-
+              Indicates whether the user is currently on leave, which is
+              important for resource management and project planning.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_OnLeave
+            name_column: User_OnLeave
+          - unique_name: Resource Location Type
+            label: Resource Location Type
+            description: >-
+              Describes the type of location where the user is based, which can
+              impact resource allocation and project assignments.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ResourceLocationType
+            name_column: User_ResourceLocationType
+          - unique_name: Is Active
+            label: Is Active
+            description: >-
+              Indicates whether the user is currently active within the
+              organization, essential for workforce management.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_IsActive
+            name_column: User_IsActive
+          - unique_name: Gender
+            label: Gender
+            description: >-
+              The gender of the user, which can be relevant for diversity and
+              inclusion initiatives within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_Gender
+            name_column: User_Gender
+          - unique_name: Cntry
+            label: Cntry
+            description: >-
+              The country associated with the user's Workday profile, important
+              for HR and compliance purposes.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_WorkdayCountry
+            name_column: User_WorkdayCountry
+          - unique_name: Sub Region
+            label: Sub Region
+            description: >-
+              The sub-region associated with the user's Workday profile,
+              providing additional geographical context.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_WorkdaySubRegion
+            name_column: User_WorkdaySubRegion
+          - unique_name: Workday Region Group
+            label: Workday Region Group
+            description: >-
+              The group designation for the user's region in Workday, aiding in
+              regional management and reporting.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_WorkdayRegionGroup
+            name_column: User_WorkdayRegionGroup
+          - unique_name: Home State
+            label: Home State
+            description: >-
+              The state where the user resides, which can be relevant for
+              compliance and tax purposes.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_HomeState
+            name_column: User_HomeState
+          - unique_name: Work State
+            label: Work State
+            description: >-
+              The state where the user is primarily working, important for
+              understanding labor regulations and resource allocation.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_WorkState
+            name_column: User_WorkState
+          - unique_name: Contingent Worker Type
+            label: Contingent Worker Type
+            description: >-
+              The classification of the user if they are a contingent worker,
+              providing insight into workforce composition.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContingentWorkerType
+            name_column: User_ContingentWorkerType
+          - unique_name: Contingent Worker Supplier
+            label: Contingent Worker Supplier
+            description: >-
+              The supplier or agency associated with the contingent worker,
+              useful for vendor management.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContingentWorkerSupplier
+            name_column: User_ContingentWorkerSupplier
+          - unique_name: Contract Pay Rate Currency Code
+            label: Contract Pay Rate Currency Code
+            description: >-
+              The currency code for the user's contract pay rate, important for
+              financial reporting and analysis.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContractPayRateCurrencyCode
+            name_column: User_ContractPayRateCurrencyCode
+          - unique_name: Contract Pay Rate
+            label: Contract Pay Rate
+            description: >-
+              The pay rate for the user's contract, which is essential for
+              budgeting and financial planning.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContractPayRate
+            name_column: User_ContractPayRate
+          - unique_name: Email Address
+            label: Email Address
+            description: >-
+              The email address of the user, necessary for communication and
+              collaboration within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_EmailAddress
+            name_column: User_EmailAddress
+          - unique_name: Management Level
+            label: Management Level
+            description: >-
+              The level of management the user holds within the organization,
+              useful for understanding organizational hierarchy.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ManagementLevel
+            name_column: User_ManagementLevel
+          - unique_name: Manager
+            label: Manager
+            description: >-
+              The name of the user's direct manager, providing clarity on
+              managerial relationships within the organization.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_Manager
+            name_column: User_Manager
+          - unique_name: Manager2
+            label: Manager2
+            description: >-
+              The name of the user's second manager, useful for understanding
+              complex reporting hierarchies.
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_Manager2
+            name_column: User_Manager2
+          - unique_name: Hire Date
+            label: Hire Date
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_HireDate
+            name_column: User_HireDate
+          - unique_name: Termination Date
+            label: Termination Date
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_TerminationDate
+            name_column: User_TerminationDate
+          - unique_name: Original Hire Date
+            label: Original Hire Date
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_OriginalHireDate
+            name_column: User_OriginalHireDate
+          - unique_name: Tenure Days
+            label: Tenure Days
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - TenureDays
+            name_column: TenureDays
+          - unique_name: Tenure Months
+            label: Tenure Months
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - TenureMonths
+            name_column: TenureMonths
+          - unique_name: Tenure Years
+            label: Tenure Years
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - TenureYears
+            name_column: TenureYears
+          - unique_name: Contract End Date
+            label: Contract End Date
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContractEndDate
+            name_column: User_ContractEndDate
+          - unique_name: Leave End Estimate
+            label: Leave End Estimate
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_LeaveEndEstimate
+            name_column: User_LeaveEndEstimate
+          - unique_name: Leave End Actual
+            label: Leave End Actual
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_LeaveEndActual
+            name_column: User_LeaveEndActual
+          - unique_name: Constant Service Date
+            label: Constant Service Date
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ConstantServiceDate
+            name_column: User_ConstantServiceDate
+          - unique_name: Contract PayRate for LatestContract
+            label: Contract Pay Rate for LatestContract
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_ContractPayRateforLatestContract
+            name_column: User_ContractPayRateforLatestContract
+          - unique_name: Leave Start
+            label: Leave Start
+            contains_unique_names: false
+            dataset: user_dim
+            is_unique_key: false
+            key_columns:
+              - User_LeaveStart
+            name_column: User_LeaveStart
+level_attributes:
+  - unique_name: User ID
+    label: User ID
+    description: >-
+      A unique identifier assigned to each user within the organization,
+      essential for tracking and managing user data. It also serves as the
+      primary key (PK) for multi dimensional modeling.
+    contains_unique_names: false
+    dataset: user_dim
+    folder: Common Dimensions
+    is_unique_key: false
+    key_columns:
+      - User_ID
+    name_column: User_ID
+type: standard

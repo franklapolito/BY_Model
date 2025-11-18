@@ -1,0 +1,210 @@
+unique_name: Journal
+object_type: dimension
+label: Journal
+description: >-
+  The table contains detailed records of journal entries related to financial
+  transactions. It includes information such as journal IDs, report types,
+  transaction dates, and various codes associated with revenue categories and
+  currencies. This data can be used for financial reporting, auditing purposes,
+  and analyzing transaction patterns over time.
+
+
+  The source of the Journal data is (Workday).
+hierarchies:
+  - unique_name: Journal Fields
+    label: Journal
+    description: Revenue
+    levels:
+      - unique_name: Journal ID
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: Journal Report Type
+            label: Journal Report Type
+            description: >-
+              Indicates the type of report associated with the journal entry,
+              which can help in categorizing financial data.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_ReportType
+            name_column: Journal_ReportType
+          - unique_name: Journal Number
+            label: Journal Number
+            description: >-
+              Represents the sequential number assigned to the journal entry,
+              useful for maintaining order and reference.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_Number
+            name_column: Journal_Number
+          - unique_name: Journal Sequence Number
+            label: Journal Sequence Number
+            description: >-
+              A number that indicates the order of entries within a specific
+              journal, aiding in the organization of transactions.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_SequenceNumber
+            name_column: Journal_SequenceNumber
+          - unique_name: Journal Source
+            label: Journal Source
+            description: >-
+              Denotes the source from which the journal entry originated,
+              providing context for the transaction.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_Source
+            name_column: Journal_Source
+          - unique_name: Journal Period Date
+            label: Journal Period Date
+            description: >-
+              The date that represents the financial period for which the
+              journal entry is recorded, crucial for period-end reporting.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_PeriodDate
+            name_column: Journal_PeriodDate
+          - unique_name: Journal Year Partition
+            label: Journal Year Partition
+            description: >-
+              Indicates the year in which the journal entry falls, facilitating
+              year-over-year financial analysis.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_YearPartition
+            name_column: Journal_YearPartition
+          - unique_name: Journal Purchase Item
+            label: Journal Purchase Item
+            description: >-
+              Describes the item purchased in the transaction, providing detail
+              for expense tracking and analysis.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_PurchaseItem
+            name_column: Journal_PurchaseItem
+          - unique_name: Journal Revenue Category ID
+            label: Journal Revenue Category ID
+            description: >-
+              Categorizes the revenue associated with the journal entry, aiding
+              in revenue analysis and reporting.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_RevenueCategoryID
+            name_column: Journal_RevenueCategoryID
+          - unique_name: PCOA Code Name
+            label: PCOA Code Name
+            description: >-
+              Represents the name of the PCOA code linked to the journal entry,
+              which is useful for financial categorization.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - PCOACodeName
+            name_column: PCOACodeName
+          - unique_name: Wing Code Name
+            label: Wing Code Name
+            description: >-
+              Indicates the name of the wing code associated with the journal
+              entry, providing additional categorization for reporting.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - WingCodeName
+            name_column: WingCodeName
+          - unique_name: Vega Code 1
+            label: Vega Code 1
+            description: >-
+              Represents the first Vega code linked to the journal entry, which
+              can be used for specific financial analysis.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - VegaCode1
+            name_column: VegaCode1
+          - unique_name: Wing Code 2
+            label: Wing Code 2
+            description: >-
+              A second wing code associated with the journal entry, offering
+              further categorization for financial reporting.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - WingCode2
+            name_column: WingCode2
+          - unique_name: Wing Code 3
+            label: Wing Code 3
+            description: >-
+              A third wing code linked to the journal entry, providing
+              additional layers of categorization.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - WingCode3
+            name_column: WingCode3
+          - unique_name: Vega Code 2
+            label: Vega Code 2
+            description: >-
+              Represents a second Vega code associated with the journal entry,
+              useful for detailed financial analysis.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - VegaCode2
+            name_column: VegaCode2
+          - unique_name: Journal Ledger Currency Code
+            label: Journal Ledger Currency Code
+            description: >-
+              Indicates the currency code used in the ledger for the journal
+              entry, important for currency conversion and reporting.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_LedgerCurrencyCode
+            name_column: Journal_LedgerCurrencyCode
+          - unique_name: Journal Transaction Currency Code
+            label: Journal Transaction Currency Code
+            description: >-
+              Represents the currency code in which the transaction was
+              conducted, essential for understanding financial impacts.
+            contains_unique_names: false
+            dataset: journal_dim
+            is_unique_key: false
+            key_columns:
+              - Journal_TransactionCurrencyCode
+            name_column: Journal_TransactionCurrencyCode
+level_attributes:
+  - unique_name: Journal ID
+    label: Journal ID
+    description: >-
+      Unique identifier for each journal entry, allowing for easy tracking and
+      reference of specific transactions.
+    contains_unique_names: false
+    dataset: journal_dim
+    folder: Common Dimensions
+    is_unique_key: false
+    key_columns:
+      - Journal_ID
+    name_column: Journal_ID
+type: standard

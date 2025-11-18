@@ -1,0 +1,19 @@
+unique_name: Total Amortization (Budget Rate)
+object_type: metric_calc
+label: Total Amortization (Budget Rate)
+description: >-
+  This metric tracks the total amortization expense across all intangible assets
+  at budget rate, meaning the values are presented in their original currency
+  without translation to a reporting currency. It combines the systematic
+  allocation of costs for both acquired software technology and other intangible
+  assets such as patents, trademarks, and customer relationships, using the
+  budgeted exchange rates or original transaction currency. This measurement is
+  used for budget planning and variance analysis, helping organizations compare
+  planned versus actual amortization expenses for all intangible assets in their
+  native currencies without the effects of currency conversion, supporting more
+  accurate cost management and strategic planning for intangible asset
+  investments.
+expression: >-
+  [Measures].[Amortization for Acquired Software Technology (Budget
+  Rate)]+[Measures].[Amortization for Intangibles (Budget Rate)]
+is_hidden: true

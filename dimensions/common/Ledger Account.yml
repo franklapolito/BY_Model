@@ -1,0 +1,124 @@
+unique_name: Ledger Account
+object_type: dimension
+label: Ledger Account
+description: >-
+  The table contains information about ledger accounts used in financial
+  reporting. It includes details such as account identifiers, types, and their
+  hierarchical levels, which can be useful for analyzing financial statements
+  and account structures. This data can assist in financial analysis, reporting,
+  and ensuring compliance with accounting standards.
+
+
+  The source of this data is Workday.
+hierarchies:
+  - unique_name: Ledger Account Hierarchy
+    label: Ledger Account Hierarchy
+    description: >-
+      A Ledger Account Hierarchy is a structured arrangement of accounts within
+      a company's general ledger, designed to organize financial data for
+      comprehensive reporting and analysis.
+    levels:
+      - unique_name: Ledger Account Level 2
+      - unique_name: LedgerAccount Level 3
+      - unique_name: LedgerAccount Level 4
+      - unique_name: LedgerAccount Level 5
+      - unique_name: Ledger Account Name
+        secondary_attributes:
+          - unique_name: Ledger Account Type
+            label: Ledger Account Type
+            description: >-
+              Indicates the type of ledger account, such as asset, liability,
+              equity, revenue, or expense, which is crucial for financial
+              categorization.
+            contains_unique_names: false
+            dataset: ledgeraccount_dim
+            is_unique_key: false
+            key_columns:
+              - LedgerAccount_Type
+            name_column: LedgerAccount_Type
+          - unique_name: FinancialStatement
+            label: FinancialStatement
+            description: >-
+              Specifies which financial statement the ledger account is
+              associated with, aiding in the organization of financial reports.
+            contains_unique_names: false
+            dataset: ledgeraccount_dim
+            is_unique_key: false
+            key_columns:
+              - LedgerAccount_FinancialStatement
+            name_column: LedgerAccount_FinancialStatement
+          - unique_name: AccountSet
+            label: AccountSet
+            description: >-
+              Represents the set of accounts to which the ledger account
+              belongs, useful for grouping related accounts in financial
+              analysis.
+            contains_unique_names: false
+            dataset: ledgeraccount_dim
+            is_unique_key: false
+            key_columns:
+              - LedgerAccount_AccountSet
+            name_column: LedgerAccount_AccountSet
+          - unique_name: Ledger Account ID
+            label: Ledger Account ID
+            contains_unique_names: false
+            dataset: ledgeraccount_dim
+            is_unique_key: false
+            key_columns:
+              - LedgerAccount_ID
+            name_column: LedgerAccount_ID
+level_attributes:
+  - unique_name: Ledger Account Name
+    label: Ledger Account Name
+    description: >-
+      Unique identifier for each ledger account, essential for tracking and
+      referencing specific accounts in financial reporting. It also serves as
+      the primary key (PK) for multi dimensional modeling.
+    contains_unique_names: false
+    dataset: ledgeraccount_dim
+    is_unique_key: false
+    key_columns:
+      - LedgerAccount_ID
+    name_column: LedgerAccount_LedgerAccount
+    sort_column: LedgerAccount_ID
+  - unique_name: Ledger Account Level 2
+    label: Ledger Account Level 2
+    description: >-
+      Represents the second level in the account hierarchy, providing additional
+      granularity in account categorization.
+    contains_unique_names: false
+    dataset: ledgeraccount_dim
+    key_columns:
+      - LedgerAccount_Lvl2
+    name_column: LedgerAccount_Lvl2
+  - unique_name: LedgerAccount Level 3
+    label: LedgerAccount Level 3
+    description: >-
+      Indicates the third level of the account hierarchy, allowing for more
+      detailed financial analysis and reporting.
+    contains_unique_names: false
+    dataset: ledgeraccount_dim
+    key_columns:
+      - LedgerAccount_Lvl3
+    name_column: LedgerAccount_Lvl3
+  - unique_name: LedgerAccount Level 4
+    label: LedgerAccount Level 4
+    description: >-
+      Specifies the fourth level in the account hierarchy, further refining the
+      categorization of ledger accounts.
+    contains_unique_names: false
+    dataset: ledgeraccount_dim
+    key_columns:
+      - LedgerAccount_Lvl4
+    name_column: LedgerAccount_Lvl4
+  - unique_name: LedgerAccount Level 5
+    label: LedgerAccount Level 5
+    description: >-
+      Represents the fifth and most detailed level of the account hierarchy,
+      essential for in-depth financial analysis.
+    contains_unique_names: false
+    dataset: ledgeraccount_dim
+    key_columns:
+      - LedgerAccount_Lvl5
+    name_column: LedgerAccount_Lvl5
+type: standard

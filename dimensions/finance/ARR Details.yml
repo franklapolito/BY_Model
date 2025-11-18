@@ -1,0 +1,316 @@
+unique_name: ARR Details
+object_type: dimension
+label: ARR Details
+hierarchies:
+  - unique_name: ARR Dimension Hierarchy
+    label: ARR Dimension Hierarchy
+    levels:
+      - unique_name: ARR Identifier
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: ARR Table Source
+            label: ARR Table Source
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_TableSource
+            name_column: ARR_TableSource
+          - unique_name: ARR Agreement Start Date
+            label: ARR Agreement Start Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementStartDate
+            name_column: ARR_AgreementStartDate
+          - unique_name: ARR Agreement End Date
+            label: ARR Agreement End Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementEndDate
+            name_column: ARR_AgreementEndDate
+          - unique_name: ARR Agreement XINT Date
+            label: ARR Agreement XINT Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementXINTDate
+            name_column: ARR_AgreementXINTDate
+          - unique_name: ARR Agreement Xint Status Desc
+            label: ARR Agreement Xint Status Desc
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementXintStatusDesc
+            name_column: ARR_AgreementXintStatusDesc
+          - unique_name: ARR Agreement Number
+            label: ARR Agreement Number
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementNumber
+            name_column: ARR_AgreementNumber
+          - unique_name: ARR FF Agreement Number
+            label: ARR FF Agreement Number
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_FFAgreementNumber
+            name_column: ARR_FFAgreementNumber
+          - unique_name: ARR Source Name
+            label: ARR Source Name
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_SourceName
+            name_column: ARR_SourceName
+          - unique_name: ARR Business Unit
+            label: ARR Business Unit
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARU_BU
+            name_column: ARU_BU
+          - unique_name: ARR Source ID
+            label: ARR Source ID
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_SourceID
+            name_column: ARR_SourceID
+          - unique_name: ARR Agreement Name
+            label: ARR Agreement Name
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementName
+            name_column: ARR_AgreementName
+          - unique_name: ARR Agreement Duration
+            label: ARR Agreement Duration
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementDuration
+            name_column: ARR_AgreementDuration
+          - unique_name: ARR Agreement Type
+            label: ARR Agreement Type
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementType
+            name_column: ARR_AgreementType
+          - unique_name: ARR Agreement Recurring Billing Frequency
+            label: ARR Agreement Recurring Billing Frequency
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementRecurringBillingFrequency
+            name_column: ARR_AgreementRecurringBillingFrequency
+          - unique_name: ARR Agreement Reason Code Category
+            label: ARR Agreement Reason Code Category
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementReasonCodeCategory
+            name_column: ARR_AgreementReasonCodeCategory
+          - unique_name: ARR Agreement Reason Code
+            label: ARR Agreement Reason Code
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementReasonCode
+            name_column: ARR_AgreementReasonCode
+          - unique_name: ARR Agreement Is Renewable
+            label: ARR Agreement Is Renewable
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementIsRenewable
+            name_column: ARR_AgreementIsRenewable
+          - unique_name: ARR Agreement Deal Band
+            label: ARR Agreement Deal Band
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementDealBand
+            name_column: ARR_AgreementDealBand
+          - unique_name: ARR Agreement Opp ID
+            label: ARR Agreement Opp ID
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementOppID
+            name_column: ARR_AgreementOppID
+          - unique_name: ARR Agreement Revenue On Hold Reason
+            label: ARR Agreement Revenue On Hold Reason
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementRevenueOnHoldReason
+            name_column: ARR_AgreementRevenueOnHoldReason
+          - unique_name: ARR Is SaaS Conversion
+            label: ARR Is SaaS Conversion
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_IsSaaSConversion
+            name_column: ARR_IsSaaSConversion
+          - unique_name: ARR Cust Type
+            label: ARR Cust Type
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_CustType
+            name_column: ARR_CustType
+          - unique_name: ARR Agreement Renewal Probability
+            label: ARR Agreement Renewal Probability
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementRenewalProbability
+            name_column: ARR_AgreementRenewalProbability
+          - unique_name: ARR Agreement Cancel Term
+            label: ARR Agreement Cancel Term
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementCancelTerm
+            name_column: ARR_AgreementCancelTerm
+          - unique_name: ARR Agreement Status
+            label: ARR Agreement Status
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementStatus
+            name_column: ARR_AgreementStatus
+          - unique_name: ARR Agreement Subscription Model
+            label: ARR Agreement Subscription Model
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementSubscriptionModel
+            name_column: ARR_AgreementSubscriptionModel
+          - unique_name: ARR Agreement Contract End Date
+            label: ARR Agreement Contract End Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementContractEndDate
+            name_column: ARR_AgreementContractEndDate
+          - unique_name: ARR Agreement Contract Start Date
+            label: ARR Agreement Contract Start Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementContractStartDate
+            name_column: ARR_AgreementContractStartDate
+          - unique_name: ARR Agreement Entitlement Name
+            label: ARR Agreement Entitlement Name
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementEntitlementName
+            name_column: ARR_AgreementEntitlementName
+          - unique_name: ARR Rank
+            label: ARR Rank
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_Rank
+            name_column: ARR_Rank
+          - unique_name: ARR New Agreement Number
+            label: ARR New Agreement Number
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_NewAgreementNumber
+            name_column: ARR_NewAgreementNumber
+          - unique_name: ARR New Agreement Source Name
+            label: ARR New Agreement Source Name
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_NewAgreementSourceName
+            name_column: ARR_NewAgreementSourceName
+          - unique_name: ARR New Agreement Start Date
+            label: ARR New Agreement Start Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_NewAgreementStartDate
+            name_column: ARR_NewAgreementStartDate
+          - unique_name: ARR New Agreement End Date
+            label: ARR New Agreement End Date
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_NewAgreementEndDate
+            name_column: ARR_NewAgreementEndDate
+          - unique_name: ARR End Of Term Flag
+            label: ARR End Of Term Flag
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_EndOfTermFlag
+            name_column: ARR_EndOfTermFlag
+          - unique_name: ARR End Of Term Curr Qtr Flg
+            label: ARR End Of Term Curr Qtr Flg
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_EndOfTermCurrQtrFlg
+            name_column: ARR_EndOfTermCurrQtrFlg
+          - unique_name: ARR Agreement Currency Code
+            label: ARR Agreement Currency Code
+            contains_unique_names: false
+            dataset: arr_dim
+            is_unique_key: false
+            key_columns:
+              - ARR_AgreementCurrencyCode
+            name_column: ARR_AgreementCurrencyCode
+level_attributes:
+  - unique_name: ARR Identifier
+    label: ARR Identifier
+    contains_unique_names: false
+    dataset: arr_dim
+    is_unique_key: false
+    key_columns:
+      - ARR_ID
+    name_column: ARR_ID
+type: standard

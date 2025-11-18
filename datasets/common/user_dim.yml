@@ -1,0 +1,144 @@
+unique_name: user_dim
+object_type: dataset
+label: user_dim
+description: >-
+  The table contains user information relevant to organizational structure and
+  roles. It includes details such as user identifiers, names, managerial
+  relationships, job titles, and cost center affiliations. This data can be used
+  for analyzing workforce distribution, understanding reporting hierarchies, and
+  managing resource allocation within the organization.
+
+
+  User data is primarily sourced from (Workday) but also pulls additional
+  attributes from (Upland).
+columns:
+  - name: User_ID
+    data_type: int
+  - name: User_TenroxUID
+    data_type: int
+  - name: User_FirstName
+    data_type: string
+  - name: User_LastName
+    data_type: string
+  - name: User_FullName
+    data_type: string
+  - name: User_ManagerEmployeeID
+    data_type: int
+  - name: User_Manager
+    data_type: string
+  - name: User_Manager2EmployeeID
+    data_type: int
+  - name: User_Manager2
+    data_type: string
+  - name: User_BUID
+    data_type: string
+  - name: User_CostCenter_ID
+    data_type: int
+  - name: User_BusinessTitle
+    data_type: string
+  - name: User_PositionID
+    data_type: string
+  - name: User_Position
+    data_type: string
+  - name: User_JobFamily
+    data_type: string
+  - name: User_Jobprofile_JobCode
+    data_type: int
+  - name: User_JobProfile
+    data_type: string
+  - name: User_JobTitle
+    data_type: string
+  - name: User_BudgetRole
+    data_type: string
+  - name: User_UtilizationType
+    data_type: string
+  - name: User_RoleType
+    data_type: string
+  - name: User_PlanningRole
+    data_type: string
+  - name: User_PlanningRoleID
+    data_type: string
+  - name: User_RoleTypeID
+    data_type: string
+  - name: User_Grade
+    data_type: string
+  - name: User_FrequencyforPrimaryPosition
+    data_type: string
+  - name: User_WorkerType
+    data_type: string
+  - name: User_ResourceLocationType
+    data_type: string
+  - name: User_TimeType
+    data_type: string
+  - name: User_OriginalHireDate
+    data_type: date
+  - name: User_HireDate
+    data_type: date
+  - name: User_ConstantServiceDate
+    data_type: date
+  - name: User_TerminationDate
+    data_type: date
+  - name: TenureDays
+    data_type: int
+  - name: TenureMonths
+    data_type: long
+  - name: TenureYears
+    data_type: long
+  - name: User_OnLeave
+    data_type: boolean
+  - name: User_LeaveStart
+    data_type: date
+  - name: User_LeaveEndEstimate
+    data_type: date
+  - name: User_LeaveEndActual
+    data_type: date
+  - name: User_IsActive
+    data_type: string
+  - name: User_Gender
+    data_type: string
+  - name: User_Location_ID
+    data_type: string
+  - name: User_Location_Site
+    data_type: string
+  - name: User_Location_Country
+    data_type: string
+  - name: User_Location_SubRegion
+    data_type: string
+  - name: User_Location_Region
+    data_type: string
+  - name: User_Region_ID
+    data_type: string
+  - name: User_WorkdayCountry
+    data_type: string
+  - name: User_WorkdaySubRegion
+    data_type: string
+  - name: User_WorkdayRegion
+    data_type: string
+  - name: User_WorkdayRegionGroup
+    data_type: string
+  - name: User_HomeState
+    data_type: string
+  - name: User_WorkState
+    data_type: string
+  - name: User_ContingentWorkerType
+    data_type: string
+  - name: User_ContingentWorkerSupplier
+    data_type: string
+  - name: User_ContractPayRateCurrencyCode
+    data_type: string
+  - name: User_ContractPayRate
+    data_type: double
+  - name: User_ContractPayRateforLatestContract
+    data_type: double
+  - name: User_ContractEndDate
+    data_type: date
+  - name: User_EmailAddress
+    data_type: string
+  - name: User_ManagementLevel
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: user_dim

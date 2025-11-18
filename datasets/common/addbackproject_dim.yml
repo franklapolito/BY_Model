@@ -1,0 +1,48 @@
+unique_name: addbackproject_dim
+object_type: dataset
+label: addbackproject_dim
+description: >-
+  In accounting, an addback is an expense that is added back to a company's
+  earnings to provide a more accurate picture of its financial performance for
+  valuation purposes.
+
+
+  The primary goal of addbacks is to give potential buyers and lenders a clear
+  understanding of a business's true, ongoing profitability and cash flow. This
+  is especially relevant when using a multiple of EBITDA (Earnings Before
+  Interest, Taxes, Depreciation, and Amortization) to determine a company's
+  market value.
+
+
+  Source for this data is in our finance/accounting system (Workday).
+columns:
+  - name: AddbackProject_Key
+    data_type: string
+  - name: AddbackProject_Project_ID
+    data_type: int
+  - name: AddbackProject_ProjectID
+    data_type: string
+  - name: AddbackProject_Description
+    data_type: string
+  - name: AddbackProject_Sort
+    data_type: string
+  - name: AddbackProject_AddbackTag
+    data_type: string
+  - name: AddbackProject_AccountID
+    data_type: string
+  - name: AddbackProject_Type
+    data_type: string
+  - name: AddbackProject_Owner
+    data_type: string
+  - name: AddbackProject_ProjectManager
+    data_type: string
+  - name: AddbackProject_StartDate
+    data_type: date
+  - name: AddbackProject_EndDate
+    data_type: date
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: addbackproject_dim

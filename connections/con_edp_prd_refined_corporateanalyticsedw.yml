@@ -1,0 +1,6 @@
+unique_name: con_edp_prd_refined_corporateanalyticsedw
+object_type: connection
+label: con_edp_prd_refined_corporateanalyticsedw
+as_connection: bricks_test
+database: edp_prd_refined
+schema: corporateanalyticsedw

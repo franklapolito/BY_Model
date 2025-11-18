@@ -1,0 +1,18 @@
+unique_name: Net Income (Budget Rate)
+object_type: metric_calc
+label: Net Income (Budget Rate)
+description: >
+  This metric represents the bottom-line profitability of the organization at
+  budget rate, meaning the values are presented in their original currency
+  without translation to a reporting currency. It calculates total revenues
+  minus all expenses, including operating costs, interest, taxes, depreciation,
+  and amortization, using the budgeted exchange rates or original transaction
+  currency. This measurement is used for budget planning and variance analysis,
+  helping organizations compare planned versus actual net earnings in their
+  native currencies without the effects of currency conversion, supporting more
+  accurate performance evaluation, forecasting, and strategic planning across
+  different markets and regions.
+expression: >-
+  ([Measures].[Journal Budget Rate Amount],[Ledger
+  Account].[FinancialStatement].[FinancialStatement].&[Income Statement])
+is_hidden: false

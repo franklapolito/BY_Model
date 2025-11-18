@@ -1,0 +1,18 @@
+unique_name: Taxes (Budget Rate)
+object_type: metric_calc
+label: Taxes (Budget Rate)
+description: >-
+  This metric tracks the total tax expenses incurred by the organization at
+  budget rate, meaning the values are presented in their original currency
+  without translation to a reporting currency. It represents all tax obligations
+  including income taxes, corporate taxes, and other tax liabilities related to
+  business operations, using the budgeted exchange rates or original transaction
+  currency. This measurement is used for budget planning and variance analysis,
+  helping organizations compare planned versus actual tax expenses in their
+  native currencies without the effects of currency conversion, supporting more
+  accurate tax planning, forecasting, and financial strategy development across
+  different jurisdictions and markets.
+expression: >-
+  ([Measures].[Journal Budget Rate Amount],[Ledger Account].[Ledger Account
+  Hierarchy].[LedgerAccount Level 3].&[Taxes])
+is_hidden: true

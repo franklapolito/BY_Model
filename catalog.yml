@@ -1,0 +1,6 @@
+version: 1.1
+unique_name: Journals
+object_type: catalog
+label: Journals
+aggressive_agg_promotion: false
+build_speculative_aggs: true

@@ -1,0 +1,18 @@
+unique_name: Amortization for Intangibles (As Reported)
+object_type: metric_calc
+label: Amortization for Intangibles (As Reported)
+description: >-
+  This metric tracks the amortization expense for intangible assets,
+  representing the systematic allocation of costs associated with non-physical
+  assets such as patents, trademarks, customer relationships, and other
+  intellectual property over their useful lives. It captures the non-cash
+  expense that reflects how the value of these intangible assets is gradually
+  recognized over time in the financial statements. This measurement is used for
+  financial reporting purposes to show the as-reported figures for intangible
+  asset amortization, helping organizations understand the financial impact of
+  their intangible investments and meet accounting requirements for non-physical
+  asset depreciation.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  ID].[Ledger Account ID].&[7000])
+is_hidden: true

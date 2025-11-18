@@ -1,0 +1,49 @@
+unique_name: costcenter_dim
+object_type: dataset
+label: costcenter_dim
+description: >-
+  A cost center is a division, department, or unit within a company that incurs
+  costs but does not does not always generate revenue. These centers are crucial
+  for business operations, supporting revenue-generating activities by
+  performing functions like marketing, IT, or customer service. By tracking
+  expenses, cost centers allow for better resource allocation, financial
+  control, and strategic decision-making, helping the organization improve
+  efficiency and profitability indirectly.
+
+
+  The source of this data is (Workday).
+columns:
+  - name: CostCenter_ID
+    data_type: int
+  - name: CostCenter_Name
+    data_type: string
+  - name: CostCenter_CostCenter
+    data_type: string
+  - name: CostCenter_Level5ID
+    data_type: string
+  - name: CostCenter_Level5
+    data_type: string
+  - name: CostCenter_Level4ID
+    data_type: string
+  - name: CostCenter_Level4
+    data_type: string
+  - name: CostCenter_Level3ID
+    data_type: string
+  - name: CostCenter_Level3
+    data_type: string
+  - name: CostCenter_Level2ID
+    data_type: string
+  - name: CostCenter_Level2
+    data_type: string
+  - name: CostCenter_BusinessUnitID
+    data_type: string
+  - name: CostCenter_BusinessUnit
+    data_type: string
+  - name: CostCenter_InactiveFlag
+    data_type: boolean
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: costcenter_dim

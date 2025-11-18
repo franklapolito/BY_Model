@@ -1,0 +1,20 @@
+unique_name: Interest Expense For Asset-Related Accounts (As Reported)
+object_type: metric_calc
+label: Interest Expense For Asset-Related Accounts (As Reported)
+description: >-
+  This metric tracks the interest expense specifically associated with
+  asset-related financing, representing the borrowing costs tied to the
+  acquisition, construction, or development of specific assets. It captures
+  interest charges on loans, credit facilities, or other financing arrangements
+  that are directly attributable to particular assets, such as equipment
+  financing, real estate mortgages, or construction loans where the borrowing is
+  linked to a specific capital investment. This measurement is used for
+  financial reporting purposes to show the as-reported figures for
+  asset-specific interest costs, helping organizations distinguish between
+  general operating debt expenses and financing costs tied to particular
+  investments, supporting more accurate cost allocation and asset valuation
+  decisions.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  ID].&[8315])
+is_hidden: true

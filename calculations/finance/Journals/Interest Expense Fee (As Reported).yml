@@ -1,0 +1,18 @@
+unique_name: Interest Expense Fee (As Reported)
+object_type: metric_calc
+label: Interest Expense Fee (As Reported)
+description: >-
+  This metric tracks the fees and charges associated with interest expenses and
+  their amortization over time, representing the additional costs beyond base
+  interest rates that businesses incur when borrowing funds. It captures
+  expenses such as loan origination fees, facility fees, commitment fees, and
+  the systematic amortization of upfront borrowing costs that are spread over
+  the life of the debt. This measurement is used for financial reporting
+  purposes to show the as-reported figures for interest-related fees, helping
+  organizations understand the total cost of debt financing beyond simple
+  interest payments and support more comprehensive analysis of borrowing
+  efficiency and capital structure decisions.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  Hierarchy].[LedgerAccount Level 5].&[Interest Expense and Fee Amortization])
+is_hidden: true

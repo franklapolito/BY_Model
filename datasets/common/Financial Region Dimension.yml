@@ -1,0 +1,22 @@
+unique_name: Financial Region Dimension
+object_type: dataset
+label: Financial Region Dimension
+columns:
+  - name: FinancialRegion_ID
+    data_type: string
+  - name: FinancialRegion_Country
+    data_type: string
+  - name: FinancialRegion_SubRegion
+    data_type: string
+  - name: FinancialRegion_Region
+    data_type: string
+  - name: FinancialRegion_Group
+    data_type: string
+  - name: FinancialRegion_GlobalNonRegional
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: financialregion_dim

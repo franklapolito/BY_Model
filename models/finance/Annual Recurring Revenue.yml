@@ -1,0 +1,55 @@
+unique_name: Annual Recurring Revenue.yml
+object_type: model
+label: Annual Recurring Revenue.yml
+description: >-
+  The table contains data related to agreements and their financial metrics. It
+  includes information such as agreement IDs, reporting dates, financial
+  regions, and various monetary amounts in USD and local currency. This data can
+  be used for financial analysis, forecasting, and tracking agreement
+  performance over time.
+dimensions: []
+metrics:
+  - unique_name: Reporting Amount
+  - unique_name: Budget Rate Amount
+  - unique_name: Local Currency Amount
+  - unique_name: Budget Rate Amount from Prior Quarter
+  - unique_name: Budget Rate Amount from Prior Year
+  - unique_name: Reporting Amount from Prior Quarter
+  - unique_name: Reporting Amount from Prior Year
+relationships:
+  - unique_name: Annual Recurring Revenue_ARR_AgreementCustomer_ID_to_Customer_Customer ID
+    from:
+      dataset: Annual Recurring Revenue
+      join_columns:
+        - ARR_AgreementCustomer_ID
+    to:
+      dimension: Customer
+      level: Customer ID
+  - unique_name: >-
+      Annual Recurring Revenue_ARR_AgreementFinancialRegion_ID_to_Finance
+      Region_Region ID
+    from:
+      dataset: Annual Recurring Revenue
+      join_columns:
+        - ARR_AgreementFinancialRegion_ID
+    to:
+      dimension: Finance Region
+      level: Region ID
+  - unique_name: Annual Recurring Revenue_ARR_Date_ID_to_Date_Date ID
+    from:
+      dataset: Annual Recurring Revenue
+      join_columns:
+        - ARR_Date_ID
+    to:
+      dimension: Date
+      level: Date ID
+  - unique_name: >-
+      Annual Recurring Revenue_ARR_ID_to_arr_dim_dimension_Annual Recurring
+      Revenue Identifier
+    from:
+      dataset: Annual Recurring Revenue
+      join_columns:
+        - ARR_ID
+    to:
+      dimension: ARR Details
+      level: ARR Identifier

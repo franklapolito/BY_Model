@@ -1,0 +1,10 @@
+unique_name: Budget Rate Amount from Prior Quarter
+object_type: metric_calc
+label: Budget Rate Amount from Prior Quarter
+description: >-
+  This measure calculates the Annual Recurring Revenue(Budget Rate Amount) from
+  the immediately preceding quarter.
+expression: >-
+  (ParallelPeriod([Date].[Date Dimension Hierarchy].[Quarter], 1),
+  [Measures].[Budget Rate Amount])
+is_hidden: false

@@ -1,0 +1,17 @@
+unique_name: BU Owned Expense (As Reported)
+object_type: metric_calc
+label: BU Owned Expense (As Reported)
+description: >-
+  This metric captures the total expense amounts generated from all
+  asset-related accounts that are owned and managed by specific business units.
+  It represents the financial impact of asset transactions, including
+  depreciation, amortization, impairments, and other asset-related expenses that
+  are attributed to business unit operations. This measurement is used for
+  financial reporting purposes to show the as-reported figures for asset-driven
+  expenses, helping organizations track and analyze the cost burden associated
+  with their asset base at the business unit level and support accountability
+  for resource utilization across different parts of the organization.
+expression: >-
+  ([Measures].[Total Translated Amount],[Ledger Account].[Ledger Account
+  Type].[Ledger Account Type].&[Asset])
+is_hidden: false

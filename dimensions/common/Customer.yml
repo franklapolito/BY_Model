@@ -1,0 +1,603 @@
+unique_name: Customer
+object_type: dimension
+label: Customer
+description: >-
+  The table contains detailed information about customers, including their
+  identifiers, account details, industry classifications, and account types. It
+  can be used for customer segmentation analysis, tracking account creation
+  dates, and understanding customer needs regarding purchase orders. This data
+  is useful for sales and marketing teams to tailor their strategies and improve
+  customer engagement.
+
+
+  The source for customer data is Salesforce.
+hierarchies:
+  - unique_name: Customers
+    label: Customer
+    levels:
+      - unique_name: Customer ID
+        secondary_attributes:
+          - unique_name: Customer Group Name
+            label: Customer Group Name
+            description: >+
+              The name of the group associated with the customer, providing
+              context for their classification.
+
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_GroupName
+            name_column: Customer_GroupName
+          - unique_name: Customer Industry
+            label: Customer Industry
+            description: >+
+              The primary industry in which the customer operates, aiding in
+              market analysis and targeted marketing efforts.
+
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Industry
+            name_column: Customer_Industry
+          - unique_name: Customer AccountName
+            label: Customer Account Name
+            description: >+
+              The name associated with the customer's account, which is often
+              used in communications and reporting.
+
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountName
+            name_column: Customer_AccountName
+          - unique_name: Customer SFDC Acct No
+            label: Customer SFDC Acct No
+            description: >-
+              The account number used in the Salesforce system, important for
+              CRM-related activities.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_SFDCAcctNo
+            name_column: Customer_SFDCAcctNo
+          - unique_name: Customer Sub Industry
+            label: Customer Sub Industry
+            description: >-
+              A more specific classification within the broader industry,
+              allowing for finer segmentation.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_SubIndustry
+            name_column: Customer_SubIndustry
+          - unique_name: Customer Segment
+            label: Customer Segment
+            description: >-
+              The segment to which the customer belongs, which can inform
+              marketing strategies and product offerings.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Segment
+            name_column: Customer_Segment
+          - unique_name: Customer Market Segment
+            label: Customer Market Segment
+            description: >-
+              Indicates the market segment classification, useful for
+              understanding customer demographics and behavior.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_MarketSegment
+            name_column: Customer_MarketSegment
+          - unique_name: Customer BY Sub Segment
+            label: Customer BY Sub Segment
+            description: >-
+              A further breakdown of the customer segment, providing additional
+              granularity for analysis.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_BYSubSegment
+            name_column: Customer_BYSubSegment
+          - unique_name: Customer Account Type
+            label: Customer Account Type
+            description: >-
+              The type of account held by the customer, which can influence
+              service offerings and engagement strategies.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountType
+            name_column: Customer_AccountType
+          - unique_name: Customer Classification
+            label: Customer Classification
+            description: >-
+              A classification that categorizes customers based on specific
+              criteria, aiding in targeted marketing efforts.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Classification
+            name_column: Customer_Classification
+          - unique_name: Customer PO Needed For Lic
+            label: Customer PO Needed For Lic
+            description: >-
+              Indicates whether a purchase order is required for licensing,
+              important for sales processes.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_PONeededForLic
+            name_column: Customer_PONeededForLic
+          - unique_name: Customer PO Needed For Svc
+            label: Customer PO Needed For Svc
+            description: >-
+              Shows if a purchase order is necessary for services, which can
+              impact service delivery.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_PONeededForSvc
+            name_column: Customer_PONeededForSvc
+          - unique_name: Customer PO Needed For Sup
+            label: Customer PO Needed For Sup
+            description: >-
+              Indicates the need for a purchase order for supplies, relevant for
+              procurement processes.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_PONeededForSup
+            name_column: Customer_PONeededForSup
+          - unique_name: Customer Created Date
+            label: Customer Created Date
+            description: >-
+              The date when the customer account was created, useful for
+              tracking account age and lifecycle.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_CreatedDate
+            name_column: Customer_CreatedDate
+          - unique_name: Customer Theater
+            label: Customer Theater
+            description: >-
+              Represents the geographical theater in which the customer
+              operates, aiding in regional analysis.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Theater
+            name_column: Customer_Theater
+          - unique_name: Customer Theater Country
+            label: Customer Theater Country
+            description: >-
+              The country associated with the customer's theater, important for
+              understanding market dynamics.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_TheaterCountry
+            name_column: Customer_TheaterCountry
+          - unique_name: Customer Theater Region
+            label: Customer Theater Region
+            description: >-
+              The specific region within the country where the customer is
+              located, useful for localized strategies.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_TheaterRegion
+            name_column: Customer_TheaterRegion
+          - unique_name: Customer Type
+            label: Customer Type
+            description: >-
+              The classification of the customer type, which can influence
+              engagement and service delivery.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Type
+            name_column: Customer_Type
+          - unique_name: Customer Is Cab Member
+            label: Customer Is Cab Member
+            description: >-
+              Indicates whether the customer is a member of the CAB (Customer
+              Advisory Board), relevant for feedback and engagement.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_IsCabMember
+            name_column: Customer_IsCabMember
+          - unique_name: Customer Is Gap Member
+            label: Customer Is Gap Member
+            description: >-
+              Shows if the customer is part of the GAP (Global Account Program),
+              which can affect account management strategies.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_IsGapMember
+            name_column: Customer_IsGapMember
+          - unique_name: Customer Tier Level
+            label: Customer Tier Level
+            description: >-
+              The tier level assigned to the customer, which can determine the
+              level of service and support provided.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_TierLevel
+            name_column: Customer_TierLevel
+          - unique_name: Customer Is Cloud Customer
+            label: Customer Is Cloud Customer
+            description: >-
+              Indicates if the customer utilizes cloud services, important for
+              understanding their technology adoption.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_IsCloudCustomer
+            name_column: Customer_IsCloudCustomer
+          - unique_name: Customer SF SaaS Cust Defined
+            label: Customer SF SaaS Cust Defined
+            description: >-
+              Shows if the customer is defined within the SFSaaS (Software as a
+              Service) framework, relevant for service offerings.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_SFSaaSCustDefined
+            name_column: Customer_SFSaaSCustDefined
+          - unique_name: Customer TAM
+            label: Customer TAM
+            description: >-
+              The name of the Technical Account Manager, providing a point of
+              contact for customer support.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_TAM
+            name_column: Customer_TAM
+          - unique_name: Customer CSM
+            label: Customer CSM
+            description: >-
+              The name of the Customer Success Manager, who plays a key role in
+              ensuring customer satisfaction.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_CSM
+            name_column: Customer_CSM
+          - unique_name: Customer Renewal Partner
+            label: Customer Renewal Partner
+            description: >-
+              The name of the renewal partner, which can impact the renewal
+              strategy and relationship.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_RenewalPartner
+            name_column: Customer_RenewalPartner
+          - unique_name: Customer Client Partner
+            label: Customer Client Partner
+            description: >-
+              The name of the client partner, which can influence collaboration
+              and service delivery.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ClientPartner
+            name_column: Customer_ClientPartner
+          - unique_name: Customer Service Partner
+            label: Customer Service Partner
+            description: >-
+              The name of the service partner, which can affect the quality and
+              type of services provided.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ServicePartner
+            name_column: Customer_ServicePartner
+          - unique_name: Customer Age Group
+            label: Customer Age Group
+            description: >-
+              The age group classification of the customer, aiding in
+              demographic analysis and targeted marketing.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AgeGroup
+            name_column: Customer_AgeGroup
+          - unique_name: Customer Age
+            label: Customer Age
+            description: >-
+              The age of the customer account, useful for understanding account
+              longevity and lifecycle.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - CustomerAge
+            name_column: CustomerAge
+          - unique_name: Customer Phone Number
+            label: Customer Phone Number
+            description: >-
+              The contact phone number for the customer, essential for
+              communication and support.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_PhoneNumber
+            name_column: Customer_PhoneNumber
+          - unique_name: Customer Credit Limit Currency
+            label: Customer Credit Limit Currency
+            description: >-
+              The currency in which the customer's credit limit is defined,
+              important for financial transactions.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_CreditLimitCurrency
+            name_column: Customer_CreditLimitCurrency
+          - unique_name: Customer Credit Limit
+            label: Customer Credit Limit
+            description: >-
+              The maximum credit limit assigned to the customer, which can
+              influence purchasing decisions.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_CreditLimit
+            name_column: Customer_CreditLimit
+          - unique_name: Customer Special 1
+            label: Customer Special 1
+            description: >-
+              A field for any special notes or identifiers related to the
+              customer, providing additional context.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Special1
+            name_column: Customer_Special1
+          - unique_name: Customer Special 2
+            label: Customer Special 2
+            description: >-
+              Another field for special notes or identifiers, allowing for
+              customized tracking.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Special2
+            name_column: Customer_Special2
+          - unique_name: Customer Special 3
+            label: Customer Special 3
+            description: >-
+              A third field for special notes, which can be used for various
+              customer-specific information.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Special3
+            name_column: Customer_Special3
+          - unique_name: Customer Special 4
+            label: Customer Special 4
+            description: >-
+              A fourth field for special notes, providing flexibility for
+              additional customer data.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Special4
+            name_column: Customer_Special4
+          - unique_name: Customer Segment 6sense
+            label: Customer Segment 6sense
+            description: >-
+              The segment classification used in the 6sense platform, relevant
+              for predictive analytics and marketing.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_Segment_6sense
+            name_column: Customer_Segment_6sense
+          - unique_name: Customer Profile Fit 6sense
+            label: Customer Profile Fit 6sense
+            description: >-
+              Indicates how well the customer fits the ideal profile as
+              determined by the 6sense platform, aiding in targeting efforts.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ProfileFit_6sense
+            name_column: Customer_ProfileFit_6sense
+          - unique_name: Customer Currency Code
+            label: Customer Currency Code
+            description: >-
+              The currency code used for transactions with the customer,
+              important for financial reporting and analysis.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_CurrencyCode
+            name_column: Customer_CurrencyCode
+          - unique_name: Customer Engagement Level
+            label: Customer Engagement Level
+            description: >-
+              A score reflecting the level of engagement the customer has with
+              the company, useful for assessing relationship strength.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_EngagementLevel
+            name_column: Customer_EngagementLevel
+          - unique_name: Customer Account Profile Score
+            label: Customer Account Profile Score
+            description: >-
+              A score that evaluates the overall profile of the customer
+              account, assisting in prioritization and strategy development.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountProfileScore
+            name_column: Customer_AccountProfileScore
+          - unique_name: Customer Account Reach Score Num
+            label: Customer Account Reach Score Num
+            description: >-
+              A numerical score indicating the reach potential of the customer
+              account, useful for sales forecasting.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountReachScoreNum
+            name_column: Customer_AccountReachScoreNum
+          - unique_name: Customer Account Reach Score
+            label: Customer Account Reach Score
+            description: >-
+              A qualitative assessment of the account's reach, providing
+              insights into potential market impact.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountReachScore
+            name_column: Customer_AccountReachScore
+          - unique_name: Customer Account Intent Score
+            label: Customer Account Intent Score
+            description: >-
+              A score that reflects the customer's intent to purchase, aiding in
+              sales strategy and prioritization.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountIntentScore
+            name_column: Customer_AccountIntentScore
+          - unique_name: Customer Account Buying Stage
+            label: Customer Account Buying Stage
+            description: >-
+              Indicates the current buying stage of the customer, which is
+              critical for tailoring sales approaches.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountBuyingStage
+            name_column: Customer_AccountBuyingStage
+          - unique_name: Customer Account Plan
+            label: Customer Account Plan
+            description: >-
+              Details the strategic plan associated with the customer account,
+              guiding engagement and service delivery.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_AccountPlan
+            name_column: Customer_AccountPlan
+          - unique_name: Customer Engagement Score
+            label: Customer Engagement Score
+            description: >-
+              A qualitative score representing the overall engagement level of
+              the customer, useful for relationship management.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_EngagementScore
+            name_column: Customer_EngagementScore
+          - unique_name: Customer Composable Journey Primary Arche Type
+            label: Customer Composable Journey Primary Arche Type
+            description: >-
+              Identifies the primary archetype of the customer's journey, aiding
+              in understanding their experience and needs.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ComposableJourneyPrimaryArcheType
+            name_column: Customer_ComposableJourneyPrimaryArcheType
+          - unique_name: Customer Composable Journey Request Date
+            label: Customer Composable Journey Request Date
+            description: >-
+              The date when the customer initiated their composable journey,
+              important for tracking engagement timelines.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ComposableJourneyRequestDate
+            name_column: Customer_ComposableJourneyRequestDate
+          - unique_name: Customer Composible Journey Status
+            label: Customer Composible Journey Status
+            description: >-
+              Describes the current status of the customer's composable journey,
+              providing insights into their progress and needs.
+            contains_unique_names: false
+            dataset: customer_dim
+            is_unique_key: false
+            key_columns:
+              - Customer_ComposibleJourneyStatus
+            name_column: Customer_ComposibleJourneyStatus
+level_attributes:
+  - unique_name: Customer ID
+    label: Customer ID
+    description: >-
+      The table contains detailed information about customers, including their
+      identifiers, account details, industry classifications, and account types.
+      It can be used for customer segmentation analysis, tracking account
+      creation dates, and understanding customer needs regarding purchase
+      orders. This data is useful for sales and marketing teams to tailor their
+      strategies and improve customer engagement.
+
+
+      The source for customer data is (Salesforce).
+    contains_unique_names: false
+    dataset: customer_dim
+    is_unique_key: false
+    key_columns:
+      - Customer_ID
+    name_column: Customer_ID
+type: standard

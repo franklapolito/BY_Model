@@ -1,0 +1,81 @@
+unique_name: product_dim
+object_type: dataset
+label: product_dim
+description: >-
+  The table contains detailed information about products, including their
+  identifiers, names, classifications, and lifecycle stages. It can be used for
+  product management, market analysis, and reporting purposes. Key use cases
+  include tracking product variations, analyzing market segments, and
+  understanding product positioning within programs. Additionally, it provides
+  insights into product origins and delivery points, which can aid in logistics
+  and compliance.
+
+
+  The source of this data is (Salesforce MDM).
+columns:
+  - name: Product_ID
+    data_type: long
+  - name: Product_ProductName
+    data_type: string
+  - name: Product_ProductCodeName
+    data_type: string
+  - name: Product_MasterProductID
+    data_type: long
+  - name: Product_MasterProduct
+    data_type: string
+  - name: Product_MasterProductCodeName
+    data_type: string
+  - name: Product_ProgramID
+    data_type: long
+  - name: Product_ProgramName
+    data_type: string
+  - name: Product_ProgramParentID
+    data_type: long
+  - name: Product_ProgramParentName
+    data_type: string
+  - name: Product_SegmentID
+    data_type: long
+  - name: Product_SegmentName
+    data_type: string
+  - name: Product_ProductType
+    data_type: string
+  - name: Product_IsCoreComplement
+    data_type: boolean
+  - name: Product_LifeCycle
+    data_type: string
+  - name: Product_InnovationHorizon
+    data_type: string
+  - name: Product_ProductDisposition
+    data_type: string
+  - name: Product_ProductOrigin
+    data_type: string
+  - name: Product_LicenseLevelProductID
+    data_type: long
+  - name: Product_POD
+    data_type: string
+  - name: Product_SubPOD
+    data_type: string
+  - name: Product_ProductGroup
+    data_type: string
+  - name: Product_SubscriptionModel
+    data_type: string
+  - name: Product_IsAzureOnly
+    data_type: boolean
+  - name: Product_DomainGroup
+    data_type: string
+  - name: Product_Domain
+    data_type: string
+  - name: Product_WebsiteCategory
+    data_type: string
+  - name: Product_WebsiteSubCategory
+    data_type: string
+  - name: Product_LicenseLevelProductName
+    data_type: string
+  - name: Product_PODFullName
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: product_dim

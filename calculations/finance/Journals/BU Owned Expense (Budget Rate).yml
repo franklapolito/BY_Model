@@ -1,0 +1,19 @@
+unique_name: BU Owned Expense (Budget Rate)
+object_type: metric_calc
+label: BU Owned Expense (Budget Rate)
+description: >-
+  This metric captures the total expense amounts generated from all
+  asset-related accounts that are owned and managed by specific business units
+  at budget rate, meaning the values are presented in their original currency
+  without translation to a reporting currency. It represents the financial
+  impact of asset transactions, including depreciation, amortization,
+  impairments, and other asset-related expenses that are attributed to business
+  unit operations, using the budgeted exchange rates or original transaction
+  currency. This measurement is used for budget planning and variance analysis,
+  helping organizations track and compare planned versus actual asset-driven
+  expenses at the business unit level in their native currencies without the
+  effects of currency conversion.
+expression: >-
+  ([Measures].[Journal Budget Rate Amount],[Ledger Account].[Ledger Account
+  Type].[Ledger Account Type].&[Asset])
+is_hidden: false

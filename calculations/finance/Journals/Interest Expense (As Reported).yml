@@ -1,0 +1,19 @@
+unique_name: Interest Expense (As Reported)
+object_type: metric_calc
+label: Interest Expense (As reported)
+description: >-
+  This metric tracks the interest expense incurred by the business for borrowed
+  funds, representing the cost of debt financing from loans, bonds, credit
+  facilities, and other borrowing arrangements. It captures the amounts paid to
+  lenders and creditors for the use of capital, including interest charges and
+  related fees, while excluding interest associated with asset-specific
+  financing. This measurement is used for financial reporting purposes to show
+  the as-reported figures for interest costs, helping organizations understand
+  their financing expenses, evaluate the cost of their capital structure, assess
+  debt service requirements, and support decisions around borrowing strategies
+  and capital allocation.
+expression: >-
+  (([Measures].[Interest Expense Net (As Reported)])+[Measures].[Interest
+  Expense Fee (As Reported)])-([Measures].[Interest Expense For Asset-Related
+  Accounts (As Reported)])
+is_hidden: true

@@ -1,0 +1,6 @@
+unique_name: con_edp_prd_semantic_staging_finance
+object_type: connection
+label: con_edp_prd_semantic_staging_finance
+as_connection: EDP_PRD
+database: edp_prd_semantic_staging
+schema: finance

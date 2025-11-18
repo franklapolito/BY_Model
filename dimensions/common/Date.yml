@@ -1,0 +1,94 @@
+unique_name: Date
+object_type: dimension
+label: Date
+description: >-
+  The table contains detailed date-related information, including various time
+  periods such as years, quarters, months, and weeks. It's primary use is for
+  time series analysis, reporting, and trend identification across different
+  time frames. This data is useful for understanding seasonal patterns,
+  analyzing performance over time, and aligning other datasets with specific
+  dates.
+hierarchies:
+  - unique_name: Date Dimension Hierarchy
+    label: Date Dimension Hierarchy
+    description: |-
+      Date dimension focused on the month hierarchy includes:
+
+      Year: Represents the calendar year.
+      Month: Represents each month within a year.
+      Month Name: The name of the month (e.g., January, February).
+      Fiscal Month: Optional, if fiscal months differ from calendar months.
+    levels:
+      - unique_name: Year
+      - unique_name: Quarter
+      - unique_name: Month
+      - unique_name: Date
+      - unique_name: Date ID
+        is_hidden: true
+level_attributes:
+  - unique_name: Date ID
+    label: Date ID
+    description: >-
+      A unique identifier for each date entry, facilitating easy reference and
+      linking to other datasets.
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: true
+    key_columns:
+      - Date_ID
+    name_column: Date_Name
+    sort_column: Date_ID
+    time_unit: day
+  - unique_name: Year
+    label: Year
+    description: >-
+      The year in a string format, useful for reporting and displaying
+      year-related data.
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - Date_Year
+    name_column: Date_Year
+    sort_column: Date_YearID
+    time_unit: year
+  - unique_name: Quarter
+    label: Quarter
+    description: >-
+      The quarter of the year represented as a string, useful for summarizing
+      data on a quarterly basis.
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - Date_Quarter
+    name_column: Date_Quarter
+    sort_column: Date_QuarterID
+    time_unit: quarter
+  - unique_name: Month
+    label: Month
+    description: >-
+      The month represented in string format, useful for reporting and analyzing
+      monthly trends.
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - Date_Month
+    name_column: Date_Month
+    sort_column: Date_MonthID
+    time_unit: month
+  - unique_name: Date
+    label: Date
+    description: >-
+      Represents the actual date in a standard format, useful for time-based
+      queries and analyses.
+    contains_unique_names: false
+    dataset: date_dim
+    is_unique_key: false
+    key_columns:
+      - Date_Name
+    name_column: Date_Name
+    sort_column: Date_ID
+    time_unit: day
+type: time

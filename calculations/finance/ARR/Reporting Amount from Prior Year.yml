@@ -1,0 +1,10 @@
+unique_name: Reporting Amount from Prior Year
+object_type: metric_calc
+label: Reporting Amount from Prior Year
+description: >-
+  This measure calculates the Annual Recurring Revenue(Reporting Amount) from
+  the immediately preceding year.
+expression: >-
+  (ParallelPeriod([Date].[Date Dimension Hierarchy].[Year], 1),
+  [Measures].[Reporting Amount])
+is_hidden: false

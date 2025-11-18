@@ -1,0 +1,10 @@
+unique_name: Budget Rate Amount from Prior Year
+object_type: metric_calc
+label: Budget Rate Amount from Prior Year
+description: >-
+  This measure calculates the Annual Recurring Revenue(Budget Rate Amount) from
+  the immediately preceding year.
+expression: >-
+  (ParallelPeriod([Date].[Date Dimension Hierarchy].[Year], 1),
+  [Measures].[Budget Rate Amount])
+is_hidden: false

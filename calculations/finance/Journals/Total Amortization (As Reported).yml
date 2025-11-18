@@ -1,0 +1,19 @@
+unique_name: Total Amortization (As Reported)
+object_type: metric_calc
+label: Total Amortization (As Reported)
+description: >-
+  This metric tracks the total amortization expense across all intangible
+  assets, combining the systematic allocation of costs for both acquired
+  software technology and other intangible assets such as patents, trademarks,
+  and customer relationships. It represents the comprehensive non-cash expense
+  that reflects how the value of all intangible assets is gradually recognized
+  over their useful lives in the financial statements. This measurement is used
+  for financial reporting purposes to show the as-reported figures for total
+  amortization, helping organizations understand the overall impact of
+  intangible asset investments on profitability, support financial analysis and
+  valuation, and meet accounting requirements for intangible asset depreciation
+  across all categories.
+expression: >-
+  [Measures].[Amortization for Acquired Software Technology (As
+  Reported)]+[Measures].[Amortization for Intangibles (As Reported)]
+is_hidden: true

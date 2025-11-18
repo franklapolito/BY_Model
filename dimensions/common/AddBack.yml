@@ -1,0 +1,119 @@
+unique_name: AddBack
+object_type: dimension
+label: AddBack
+description: >-
+  In accounting, an addback is an expense that is added back to a company's
+  earnings to provide a more accurate picture of its financial performance for
+  valuation purposes.
+
+
+  The primary goal of addbacks is to give potential buyers and lenders a clear
+  understanding of a business's true, ongoing profitability and cash flow. This
+  is especially relevant when using a multiple of EBITDA (Earnings Before
+  Interest, Taxes, Depreciation, and Amortization) to determine a company's
+  market value.
+
+
+  Source for this data is in our finance/accounting system in Workday.
+hierarchies:
+  - unique_name: AddBacks
+    label: AddBack
+    levels:
+      - unique_name: Project Key
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: Project Type
+            label: Project Type
+            description: >-
+              A unique identifier for each addback project, facilitating easy
+              reference and tracking within the dataset.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_Type
+            name_column: AddbackProject_Type
+          - unique_name: Addback Project Description
+            label: Addback Project Description
+            description: >-
+              Provides a detailed explanation of the addback, helping users
+              understand the nature and purpose of the expense being added back
+              to earnings.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_Description
+            name_column: AddbackProject_Description
+          - unique_name: Addback Project Addback Tag
+            label: Addback Project Addback Tag
+            description: >-
+              A label or tag associated with the addback, which can be used for
+              categorization or filtering purposes in financial analysis.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_AddbackTag
+            name_column: AddbackProject_AddbackTag
+          - unique_name: Addback Project Owner
+            label: Addback Project Owner
+            description: >-
+              Indicates the individual or team responsible for the addback
+              project, facilitating accountability and communication regarding
+              financial decisions.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_Owner
+            name_column: AddbackProject_Owner
+          - unique_name: Addback Project Start Date
+            label: Addback Project Start Date
+            description: >-
+              Marks the beginning date of the addback project, essential for
+              understanding the timeline and duration of financial impacts.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_StartDate
+            name_column: AddbackProject_StartDate
+          - unique_name: Addback Project End Date
+            label: Addback Project End Date
+            description: >-
+              Indicates the completion date of the addback project, providing
+              insight into the project's lifecycle and its relevance to
+              financial reporting.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_EndDate
+            name_column: AddbackProject_EndDate
+          - unique_name: Addback Project Project Manager
+            label: Addback Project Project Manager
+            description: >-
+              Names the project manager overseeing the addback project, which
+              can be useful for tracking project progress and management
+              responsibilities.
+            contains_unique_names: false
+            dataset: addbackproject_dim
+            is_unique_key: false
+            key_columns:
+              - AddbackProject_ProjectManager
+            name_column: AddbackProject_ProjectManager
+level_attributes:
+  - unique_name: Project Key
+    label: Project Key
+    description: >-
+      A unique identifier for each addback project, facilitating easy reference
+      and tracking within the dataset.
+    contains_unique_names: false
+    dataset: addbackproject_dim
+    folder: Common Dimensions
+    is_unique_key: false
+    key_columns:
+      - AddbackProject_Key
+    name_column: AddbackProject_Key
+type: standard

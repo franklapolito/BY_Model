@@ -1,0 +1,18 @@
+unique_name: Depreciation (Budget Rate)
+object_type: metric_calc
+label: Depreciation (Budget Rate)
+description: >-
+  This metric tracks the depreciation expense for tangible fixed assets at
+  budget rate, meaning the values are presented in their original currency
+  without translation to a reporting currency. It represents the systematic
+  allocation of costs associated with physical assets such as buildings,
+  machinery, equipment, vehicles, and furniture over their useful lives, using
+  the budgeted exchange rates or original transaction currency. This measurement
+  is used for budget planning and variance analysis, helping organizations
+  compare planned versus actual depreciation expenses in their native currencies
+  without the effects of currency conversion, supporting more accurate capital
+  planning and asset management decisions.
+expression: >-
+  ([Measures].[Journal Budget Rate Amount],[Ledger Account].[Ledger Account
+  ID].[Ledger Account ID].&[6500])
+is_hidden: true

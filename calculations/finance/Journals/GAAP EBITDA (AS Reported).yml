@@ -1,0 +1,19 @@
+unique_name: GAAP EBITDA (AS Reported)
+object_type: metric_calc
+label: GAAP EBITDA (As Reported)
+description: >-
+  This metric calculates Earnings Before Interest, Taxes, Depreciation, and
+  Amortization (EBITDA) in accordance with Generally Accepted Accounting
+  Principles (GAAP). It represents a measure of operating performance that adds
+  back non-cash expenses like depreciation and amortization, as well as taxes,
+  to provide insight into the underlying profitability and cash-generating
+  ability of the business before the impact of financing decisions, tax
+  structures, and capital investment strategies. This measurement is used for
+  financial reporting and analysis purposes to evaluate operational efficiency,
+  compare performance across companies with different capital structures, assess
+  cash flow potential, and support valuation and investment decisions.
+expression: >-
+  [Measures].[Total Translated Amount]+[Measures].[Total Amortization (As
+  Reported)]-[Measures].[Depreciation (As Reported)]-[Measures].[Taxes (As
+  Reported)]
+is_hidden: false

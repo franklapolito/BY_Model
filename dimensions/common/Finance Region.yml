@@ -1,0 +1,67 @@
+unique_name: Finance Region
+object_type: dimension
+label: Financial Region
+description: >-
+  The table contains information about financial regions, including details such
+  as country, sub-region, and region classifications. It can be used for
+  geographical analysis of financial data, regional performance assessments, and
+  understanding market segmentation.
+
+
+  The source of the financial region data is Workday.
+hierarchies:
+  - unique_name: Financial Region
+    label: Finacial Region
+    levels:
+      - unique_name: Region ID
+        secondary_attributes:
+          - unique_name: Financial Region Country
+            label: Financial Region Country
+            contains_unique_names: false
+            dataset: Financial Region Dimension
+            is_unique_key: false
+            key_columns:
+              - FinancialRegion_Country
+            name_column: FinancialRegion_Country
+          - unique_name: Financial Region Sub Region
+            label: Financial Region Sub Region
+            contains_unique_names: false
+            dataset: Financial Region Dimension
+            is_unique_key: false
+            key_columns:
+              - FinancialRegion_SubRegion
+            name_column: FinancialRegion_SubRegion
+          - unique_name: Financial Region Region
+            label: Financial Region Region
+            contains_unique_names: false
+            dataset: Financial Region Dimension
+            is_unique_key: false
+            key_columns:
+              - FinancialRegion_Region
+            name_column: FinancialRegion_Region
+          - unique_name: Financial Region Group
+            label: Financial Region Group
+            contains_unique_names: false
+            dataset: Financial Region Dimension
+            is_unique_key: false
+            key_columns:
+              - FinancialRegion_Group
+            name_column: FinancialRegion_Group
+          - unique_name: Financial Region Global Non Regional
+            label: Financial Region Global Non Regional
+            contains_unique_names: false
+            dataset: Financial Region Dimension
+            is_unique_key: false
+            key_columns:
+              - FinancialRegion_GlobalNonRegional
+            name_column: FinancialRegion_GlobalNonRegional
+level_attributes:
+  - unique_name: Region ID
+    label: Region ID
+    contains_unique_names: false
+    dataset: Financial Region Dimension
+    is_unique_key: false
+    key_columns:
+      - FinancialRegion_ID
+    name_column: FinancialRegion_ID
+type: standard

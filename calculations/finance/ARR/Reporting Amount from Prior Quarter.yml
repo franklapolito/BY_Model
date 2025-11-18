@@ -1,0 +1,10 @@
+unique_name: Reporting Amount from Prior Quarter
+object_type: metric_calc
+label: Reporting Amount from Prior Quarter
+description: >-
+  This measure calculates the Annual Recurring Revenue(Reporting Amount) from
+  the immediately preceding quarter.
+expression: >-
+  (ParallelPeriod([Date].[Date Dimension Hierarchy].[Quarter], 1),
+  [Measures].[Reporting Amount])
+is_hidden: false

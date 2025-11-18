@@ -1,0 +1,67 @@
+unique_name: Location
+object_type: dimension
+label: Location
+description: >-
+  The table contains information about various physical locations relevant to
+  our operations. It includes details such as the region, subregion, country,
+  and site associated with each location, as well as indicators of whether a
+  location is inactive. This data can be used for geographic analysis, resource
+  allocation, and operational planning.
+
+
+  The source of this data is Workday.
+hierarchies:
+  - unique_name: Region Hierarchy
+    label: Region Hierarchy
+    description: >-
+      A Region Hierarchy is an organized framework used by businesses to
+      classify and manage geographical areas for operational, sales, and
+      strategic purposes
+    levels:
+      - unique_name: Region
+      - unique_name: Country
+      - unique_name: Site
+        secondary_attributes:
+          - unique_name: Is Location Active
+            label: Is Location Active?
+            contains_unique_names: false
+            dataset: location_dim
+            is_unique_key: false
+            key_columns:
+              - Location_IsInactive
+            name_column: Location_IsInactive
+level_attributes:
+  - unique_name: Region
+    label: Region
+    description: >-
+      Indicates the broader geographic area where the location is situated,
+      useful for regional analysis and reporting.
+    contains_unique_names: false
+    dataset: location_dim
+    is_unique_key: false
+    key_columns:
+      - Location_Region
+    name_column: Location_Region
+  - unique_name: Country
+    label: Country
+    description: >-
+      Denotes the country in which the location is found, essential for
+      understanding the international scope of operations.
+    contains_unique_names: false
+    dataset: location_dim
+    is_unique_key: false
+    key_columns:
+      - Location_Country
+    name_column: Location_Country
+  - unique_name: Site
+    label: Site
+    description: >-
+      Refers to the specific site or facility associated with the location,
+      which can be critical for operational planning and resource allocation.
+    contains_unique_names: false
+    dataset: location_dim
+    is_unique_key: true
+    key_columns:
+      - Location_ID
+    name_column: Location_Site
+type: standard

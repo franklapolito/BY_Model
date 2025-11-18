@@ -1,0 +1,39 @@
+unique_name: ledgeraccount_dim
+object_type: dataset
+label: ledgeraccount_dim
+description: >-
+  The table contains information about ledger accounts used in financial
+  reporting. It includes details such as account identifiers, types, and their
+  hierarchical levels, which can be useful for analyzing financial statements
+  and account structures. This data can assist in financial analysis, reporting,
+  and ensuring compliance with accounting standards.
+
+
+  The source of this data is (Workday).
+columns:
+  - name: LedgerAccount_ID
+    data_type: string
+  - name: LedgerAccount_LedgerAccount
+    data_type: string
+  - name: LedgerAccount_Type
+    data_type: string
+  - name: LedgerAccount_FinancialStatement
+    data_type: string
+  - name: LedgerAccount_AccountSet
+    data_type: string
+  - name: LedgerAccount_Lvl1
+    data_type: string
+  - name: LedgerAccount_Lvl2
+    data_type: string
+  - name: LedgerAccount_Lvl3
+    data_type: string
+  - name: LedgerAccount_Lvl4
+    data_type: string
+  - name: LedgerAccount_Lvl5
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: ledgeraccount_dim

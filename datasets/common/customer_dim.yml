@@ -1,0 +1,146 @@
+unique_name: customer_dim
+object_type: dataset
+label: customer_dim
+description: >-
+  The table contains detailed information about customers, including their
+  identifiers, account details, industry classifications, and account types. It
+  can be used for customer segmentation analysis, tracking account creation
+  dates, and understanding customer needs regarding purchase orders. This data
+  is useful for sales and marketing teams to tailor their strategies and improve
+  customer engagement.
+
+
+  The source for customer data is (Salesforce).
+columns:
+  - name: Customer_ID
+    data_type: string
+  - name: Customer_TenroxUID
+    data_type: int
+  - name: Customer_BiCustID
+    data_type: int
+  - name: Customer_ParentID
+    data_type: string
+  - name: Customer_AccountName
+    data_type: string
+  - name: Customer_GroupID
+    data_type: string
+  - name: Customer_GroupName
+    data_type: string
+  - name: Customer_SFDCAcctNo
+    data_type: int
+  - name: Customer_Industry
+    data_type: string
+  - name: Customer_SubIndustry
+    data_type: string
+  - name: Customer_Segment
+    data_type: string
+  - name: Customer_MarketSegment
+    data_type: string
+  - name: Customer_BYSubSegment
+    data_type: string
+  - name: Customer_AccountType
+    data_type: string
+  - name: Customer_Classification
+    data_type: string
+  - name: Customer_PONeededForLic
+    data_type: boolean
+  - name: Customer_PONeededForSvc
+    data_type: boolean
+  - name: Customer_PONeededForSup
+    data_type: boolean
+  - name: Customer_CreatedDate
+    data_type: date
+  - name: Customer_Theater
+    data_type: string
+  - name: Customer_TheaterCountry
+    data_type: string
+  - name: Customer_TheaterRegion
+    data_type: string
+  - name: Customer_Type
+    data_type: string
+  - name: Customer_IsCabMember
+    data_type: boolean
+  - name: Customer_IsGapMember
+    data_type: boolean
+  - name: Customer_TierLevel
+    data_type: string
+  - name: Customer_IsCloudCustomer
+    data_type: boolean
+  - name: Customer_SFSaaSCustDefined
+    data_type: boolean
+  - name: Customer_OwnerID
+    data_type: int
+  - name: Customer_Owner
+    data_type: string
+  - name: Customer_TAMID
+    data_type: int
+  - name: Customer_TAM
+    data_type: string
+  - name: Customer_CSMID
+    data_type: int
+  - name: Customer_CSM
+    data_type: string
+  - name: Customer_RenewalPartnerID
+    data_type: int
+  - name: Customer_RenewalPartner
+    data_type: string
+  - name: Customer_ClientPartnerID
+    data_type: int
+  - name: Customer_ClientPartner
+    data_type: string
+  - name: Customer_ServicePartnerID
+    data_type: int
+  - name: Customer_ServicePartner
+    data_type: string
+  - name: CustomerAge
+    data_type: int
+  - name: Customer_AgeGroup
+    data_type: string
+  - name: Customer_PhoneNumber
+    data_type: string
+  - name: Customer_CreditLimitCurrency
+    data_type: string
+  - name: Customer_CreditLimit
+    data_type: double
+  - name: Customer_Special1
+    data_type: string
+  - name: Customer_Special2
+    data_type: string
+  - name: Customer_Special3
+    data_type: string
+  - name: Customer_Special4
+    data_type: string
+  - name: Customer_Segment_6sense
+    data_type: string
+  - name: Customer_ProfileFit_6sense
+    data_type: string
+  - name: Customer_CurrencyCode
+    data_type: string
+  - name: Customer_EngagementLevel
+    data_type: double
+  - name: Customer_AccountProfileScore
+    data_type: double
+  - name: Customer_AccountReachScoreNum
+    data_type: double
+  - name: Customer_AccountReachScore
+    data_type: string
+  - name: Customer_AccountIntentScore
+    data_type: double
+  - name: Customer_AccountBuyingStage
+    data_type: string
+  - name: Customer_AccountPlan
+    data_type: string
+  - name: Customer_EngagementScore
+    data_type: string
+  - name: Customer_ComposableJourneyPrimaryArcheType
+    data_type: string
+  - name: Customer_ComposableJourneyRequestDate
+    data_type: string
+  - name: Customer_ComposibleJourneyStatus
+    data_type: string
+  - name: ETLDate
+    data_type: date
+  - name: ETLtimestamp
+    data_type: datetime
+connection_id: con_edp_prd_semantic_staging_common
+table: customer_dim

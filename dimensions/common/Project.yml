@@ -1,0 +1,683 @@
+unique_name: Project
+object_type: dimension
+label: Project
+description: >-
+  The table contains information about various projects, including their
+  identifiers, names, and associated products. It also details the
+  organizational structure related to each project, such as portfolios,
+  reporting units, and cost centers. This data can be used for project tracking,
+  financial management, and understanding the relationships between projects and
+  their respective products or business units.
+
+
+  The source data for project is Upland.
+hierarchies:
+  - unique_name: Project Hierarchy
+    label: Project Hierarchy
+    levels:
+      - unique_name: Project ID
+        is_hidden: true
+        secondary_attributes:
+          - unique_name: Project Name
+            label: Project Name
+            description: >-
+              The name of the project, which provides a clear description of its
+              purpose or focus.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectName
+            name_column: Project_ProjectName
+          - unique_name: Release Alias
+            label: Release Alias
+            description: >-
+              An alias used for the project release, which may differ from the
+              official project name.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ReleaseAlias
+            name_column: Project_ReleaseAlias
+          - unique_name: Portfolio
+            label: Portfolio
+            description: >-
+              The portfolio to which the project belongs, helping to categorize
+              and manage multiple projects.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Portfolio
+            name_column: Project_Portfolio
+          - unique_name: Product Master Product
+            label: Product Master Product
+            description: >-
+              The master product name that represents the primary product
+              related to the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_MasterProduct
+            name_column: Project_Product_MasterProduct
+          - unique_name: Product Program Name
+            label: Product Program Name
+            description: >-
+              The name of the program under which the product falls, providing
+              context for its development.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_ProgramName
+            name_column: Project_Product_ProgramName
+          - unique_name: Product Program Parent Name
+            label: Product Program Parent Name
+            description: >-
+              The name of the parent program, indicating the hierarchical
+              structure of programs.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_ProgramParentName
+            name_column: Project_Product_ProgramParentName
+          - unique_name: Product Segment Name
+            label: Product Segment Name
+            description: >-
+              The segment name that categorizes the product within the broader
+              market or industry.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_SegmentName
+            name_column: Project_Product_SegmentName
+          - unique_name: Product POD Full Name
+            label: Product POD Full Name
+            description: >-
+              The full name of the Point of Delivery (POD) associated with the
+              product, relevant for logistics.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_PODFullName
+            name_column: Project_Product_PODFullName
+          - unique_name: Product Product Origin
+            label: Product Product Origin
+            description: >-
+              The origin of the product, which may include details about its
+              development or manufacturing location.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Product_ProductOrigin
+            name_column: Project_Product_ProductOrigin
+          - unique_name: Reporting Unit Reporting Unit
+            label: Reporting Unit Reporting Unit
+            description: >-
+              The name of the reporting unit, which is responsible for
+              overseeing the project's financials.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ReportingUnit_ReportingUnit
+            name_column: Project_ReportingUnit_ReportingUnit
+          - unique_name: Reporting Unit Parent Name
+            label: Reporting Unit Parent Name
+            description: >-
+              The name of the parent reporting unit, providing context for
+              organizational structure.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ReportingUnit_ParentName
+            name_column: Project_ReportingUnit_ParentName
+          - unique_name: Cost Center Name
+            label: Cost Center Name
+            description: >-
+              The name of the cost center, which helps in tracking expenses
+              related to the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CostCenter_Name
+            name_column: Project_CostCenter_Name
+          - unique_name: Cost Center Level3
+            label: Cost Center Level3
+            description: >-
+              The third level of the cost center hierarchy, providing more
+              detailed categorization.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CostCenter_Level3
+            name_column: Project_CostCenter_Level3
+          - unique_name: Cost Center Level4
+            label: Cost Center Level4
+            description: >-
+              The fourth level of the cost center hierarchy, allowing for even
+              finer tracking of costs.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CostCenter_Level4
+            name_column: Project_CostCenter_Level4
+          - unique_name: Cost Center Business Unit
+            label: Cost Center Business Unit
+            description: >-
+              The business unit associated with the cost center, indicating the
+              organizational area responsible for the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CostCenter_BusinessUnit
+            name_column: Project_CostCenter_BusinessUnit
+          - unique_name: Location Site
+            label: Location Site
+            description: >-
+              The specific site where the project is being executed, important
+              for logistical considerations.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Location_Site
+            name_column: Project_Location_Site
+          - unique_name: Location Country
+            label: Location Country
+            description: >-
+              The country in which the project is located, relevant for
+              compliance and reporting.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Location_Country
+            name_column: Project_Location_Country
+          - unique_name: Location Sub Region
+            label: Location Sub Region
+            description: >-
+              The sub-region within the country that provides additional
+              geographical context for the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Location_SubRegion
+            name_column: Project_Location_SubRegion
+          - unique_name: Location Region
+            label: Location Region
+            description: >-
+              The broader region encompassing the project location, useful for
+              regional analysis.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Location_Region
+            name_column: Project_Location_Region
+          - unique_name: Workday Country
+            label: Workday Country
+            description: >-
+              The country as defined in the Workday system, relevant for HR and
+              payroll considerations.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Workday_Country
+            name_column: Project_Workday_Country
+          - unique_name: Workday Sub Region
+            label: Workday Sub Region
+            description: >-
+              The sub-region as defined in the Workday system, providing
+              additional geographical context.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Workday_SubRegion
+            name_column: Project_Workday_SubRegion
+          - unique_name: Workday Region
+            label: Workday Region
+            description: >-
+              The region as defined in the Workday system, useful for
+              organizational reporting.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Workday_Region
+            name_column: Project_Workday_Region
+          - unique_name: Workday Group
+            label: Workday Group
+            description: >-
+              The group within Workday that is associated with the project,
+              relevant for resource management.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Workday_Group
+            name_column: Project_Workday_Group
+          - unique_name: Customer Account Name
+            label: Customer Account Name
+            description: >-
+              The name of the customer account associated with the project,
+              important for client management.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_Customer_AccountName
+            name_column: Project_Customer_AccountName
+          - unique_name: Used By
+            label: Used By
+            description: >-
+              Indicates who is using the project, which can include teams or
+              departments involved in its execution.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_UsedBy
+            name_column: Project_UsedBy
+          - unique_name: Project Stage
+            label: Project Stage
+            description: >-
+              The current stage of the project, providing insight into its
+              progress and status.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectStage
+            name_column: Project_ProjectStage
+          - unique_name: Project State
+            label: Project State
+            description: >-
+              The overall state of the project, which may indicate whether it is
+              active, on hold, or completed.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectState
+            name_column: Project_ProjectState
+          - unique_name: Start Date
+            label: Start Date
+            description: >-
+              The date when the project officially begins, marking the start of
+              its timeline.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_StartDate
+            name_column: Project_StartDate
+          - unique_name: End Date
+            label: End Date
+            description: >-
+              The date when the project is expected to be completed, providing a
+              target for project delivery.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_EndDate
+            name_column: Project_EndDate
+          - unique_name: Start Year
+            label: Start Year
+            description: >-
+              The year in which the project starts, useful for annual reporting
+              and analysis.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_StartYear
+            name_column: Project_StartYear
+          - unique_name: End Year
+            label: End Year
+            description: >-
+              The year in which the project is expected to end, aiding in
+              long-term planning.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_EndYear
+            name_column: Project_EndYear
+          - unique_name: Is End Dated
+            label: Is End Dated
+            description: >-
+              A boolean indicating whether the project has been marked as
+              end-dated, affecting its status.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsEndDated
+            name_column: Project_IsEndDated
+          - unique_name: Opp Close Date
+            label: Opp Close Date
+            description: >-
+              The date when the opportunity related to the project is closed,
+              relevant for sales tracking.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_OppCloseDate
+            name_column: Project_OppCloseDate
+          - unique_name: Accounting End Date
+            label: Accounting End Date
+            description: >-
+              The date when accounting for the project is finalized, important
+              for financial reporting.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_AccountingEndDate
+            name_column: Project_AccountingEndDate
+          - unique_name: Updated On Date
+            label: Updated On Date
+            description: >-
+              The date when the project information was last updated, providing
+              context for data currency.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_UpdatedOnDate
+            name_column: Project_UpdatedOnDate
+          - unique_name: Project Manager
+            label: Project Manager
+            description: >-
+              The name of the project manager responsible for overseeing the
+              project's execution.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectManager
+            name_column: Project_ProjectManager
+          - unique_name: Alternate Manager
+            label: Alternate Manager
+            description: >-
+              The name of the alternate manager who can step in for the project
+              manager if needed.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_AlternateManager
+            name_column: Project_AlternateManager
+          - unique_name: Is Bonusable Project
+            label: Is Bonusable Project
+            description: >-
+              Indicates whether the project qualifies for bonuses, which may
+              affect employee incentives.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsBonusableProject
+            name_column: Project_IsBonusableProject
+          - unique_name: Is X Chargeable
+            label: Is X Chargeable
+            description: >-
+              Indicates whether the project is chargeable under the X category,
+              impacting financial reporting.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsXChargeable
+            name_column: Project_IsXChargeable
+          - unique_name: GPS Number
+            label: GPS Number
+            description: >-
+              The GPS number associated with the project, which may be relevant
+              for location-based services.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_GPSNumber
+            name_column: Project_GPSNumber
+          - unique_name: BY Project Type
+            label: BY Project Type
+            description: >-
+              The project type as defined by the business unit, which may differ
+              from other classifications.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_BYProjectType
+            name_column: Project_BYProjectType
+          - unique_name: ProjectType
+            label: Project Type
+            description: >-
+              The classification of the project type, providing insight into its
+              nature and objectives.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectType
+            name_column: Project_ProjectType
+          - unique_name: Billing Type
+            label: Billing Type
+            description: >-
+              The type of billing used for the project, which may include fixed
+              price, time and materials, etc.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_BillingType
+            name_column: Project_BillingType
+          - unique_name: Tracking No
+            label: Tracking No
+            description: >-
+              A tracking number associated with the project, useful for
+              monitoring and reporting purposes.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_TrackingNo
+            name_column: Project_TrackingNo
+          - unique_name: Is Invoiceable
+            label: Is Invoiceable
+            description: >-
+              Indicates whether the project is invoiceable, which affects
+              billing and revenue recognition.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsInvoiceable
+            name_column: Project_IsInvoiceable
+          - unique_name: Budget Initiatives Bucket
+            label: Budget Initiatives Bucket
+            description: >-
+              The bucket designation for budget initiatives, providing context
+              for financial planning.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_BudgetInitiativesBucket
+            name_column: Project_BudgetInitiativesBucket
+          - unique_name: Is Budget Initiatives
+            label: Is Budget Initiatives
+            description: >-
+              Indicates whether the project is part of budget initiatives, which
+              may affect funding and resource allocation.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsBudgetInitiatives
+            name_column: Project_IsBudgetInitiatives
+          - unique_name: On Hold Reason Code
+            label: On Hold Reason Code
+            description: >-
+              The reason code for why the project is on hold, providing insight
+              into project status and issues.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_OnHoldReasonCode
+            name_column: Project_OnHoldReasonCode
+          - unique_name: PS2 Other Bucket
+            label: PS2 Other Bucket
+            description: >-
+              The bucket designation for projects classified as PS2 Other,
+              helping in categorization and reporting.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_PS2OtherBucket
+            name_column: Project_PS2OtherBucket
+          - unique_name: On Hold Release Date
+            label: On Hold Release Date
+            description: >-
+              The actual date when the project was released from hold, relevant
+              for tracking project timelines.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_OnHoldReleaseDate
+            name_column: Project_OnHoldReleaseDate
+          - unique_name: Target On Hold Release Date
+            label: Target On Hold Release Date
+            description: >-
+              The target date for releasing the project from hold status,
+              important for project scheduling.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_TargetOnHoldReleaseDate
+            name_column: Project_TargetOnHoldReleaseDate
+          - unique_name: Fixed Bid Currency Code
+            label: Fixed Bid Currency Code
+            description: >-
+              The currency code used for fixed bid projects, relevant for
+              pricing and contracts.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_FixedBidCurrencyCode
+            name_column: Project_FixedBidCurrencyCode
+          - unique_name: Company Currency Code
+            label: Company Currency Code
+            description: >-
+              The currency code used by the company for financial transactions
+              related to the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CompanyCurrencyCode
+            name_column: Project_CompanyCurrencyCode
+          - unique_name: Project Currency Code
+            label: Project Currency Code
+            description: >-
+              The currency code specific to the project, which may differ from
+              the company currency.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ProjectCurrencyCode
+            name_column: Project_ProjectCurrencyCode
+          - unique_name: Company Name
+            label: Company Name
+            description: >-
+              The name of the company linked to the project, important for
+              client and vendor management.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_CompanyName
+            name_column: Project_CompanyName
+          - unique_name: Is PS2 Other
+            label: Is PS2 Other
+            description: >-
+              Indicates whether the project falls under the PS2 Other category,
+              which may have specific implications for management.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_IsPS2Other
+            name_column: Project_IsPS2Other
+          - unique_name: Resource Controller
+            label: Resource Controller
+            description: >-
+              The name of the resource controller overseeing resource allocation
+              for the project.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ResourceController
+            name_column: Project_ResourceController
+          - unique_name: Opportunity Owner
+            label: Opportunity Owner
+            description: >-
+              The individual responsible for the opportunity related to the
+              project, relevant for sales tracking.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_OpportunityOwner
+            name_column: Project_OpportunityOwner
+          - unique_name: Client Partner
+            label: Client Partner
+            description: >-
+              The name of the client partner associated with the project,
+              important for client relations.
+            contains_unique_names: false
+            dataset: project_dim
+            is_unique_key: false
+            key_columns:
+              - Project_ClientPartner
+            name_column: Project_ClientPartner
+level_attributes:
+  - unique_name: Project ID
+    label: Project ID
+    description: >-
+      A unique identifier for each project, allowing for easy reference and
+      tracking within the system. It also serves as the primary key (PK) for
+      multi dimensional modeling.
+    contains_unique_names: false
+    dataset: project_dim
+    is_unique_key: false
+    key_columns:
+      - Project_ID
+    name_column: Project_ID
+type: standard

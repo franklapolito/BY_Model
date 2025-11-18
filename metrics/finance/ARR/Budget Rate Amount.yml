@@ -1,0 +1,9 @@
+unique_name: Budget Rate Amount
+object_type: metric
+label: Budget Rate Amount
+description: >-
+  Represents the budgeted rate amount associated with the agreement, important
+  for budget tracking and variance analysis.
+calculation_method: sum
+column: ARR_BudgetRateAmount
+dataset: Annual Recurring Revenue

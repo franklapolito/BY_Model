@@ -1,0 +1,9 @@
+unique_name: Local Currency Amount
+object_type: metric
+label: Local Currency Amount
+description: >-
+  Denotes the amount related to letters of credit for the agreement, relevant
+  for understanding financial guarantees.
+calculation_method: sum
+column: ARR_LCAmount
+dataset: Annual Recurring Revenue
